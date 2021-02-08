@@ -1,12 +1,12 @@
-## RainSong Application
+# RainSong Application
 
-### Background and Overview
+## Background and Overview
 
 * ${RainSong} is a web application/game that creates UI where if the user clicks on the falling tiles at the right time, it renders music notes and ultimately be able to play a song.
 
 * The tiles may change colors depending on what keyboard the user presses.
 
-### Functionality & MVP
+## Functionality & MVP
 
 In ${RainSong}, users will be able to:
 
@@ -20,7 +20,12 @@ In addition, this project will include:
 [ ] direction on how to play the game, the set of rules it follows and selection of songs
 [ ] different themes of the background
 
-### Wireframe and File Structure
+## Wireframe and File Structure
+
+### Wireframe
+![alt text](/Users/hojungcha/Desktop/wireframe.png)
+### File Structure 
+
 * /dist
     * images
     * main.css
