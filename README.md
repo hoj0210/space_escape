@@ -23,7 +23,7 @@ In addition, this project will include:
 ## Wireframe and File Structure
 
 ### Wireframe
-![Screenshot](/wireframe.png)
+![Alt text](/dist/images/wireframe.png)
 ### File Structure 
 
 * /dist
