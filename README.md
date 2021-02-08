@@ -8,11 +8,11 @@
 
 ## Functionality & MVP
 
-In ${RainSong}, users will be able to:
+In RainSong, users will be able to:
 
-[ ] change the colors of the tiles by pressing the space bar
-[ ] press the tiles that fall down at the right time, rendering a note
-[ ] play the song in the background when the user chooses a song to play
+[ ] change the colors of the tiles by pressing the space bar__
+[ ] press the tiles that fall down at the right time, rendering a note__
+[ ] play the song in the background when the user chooses a song to play__
 [ ] choose the difficulty of a song, changing the speed of the game
 
 In addition, this project will include:
