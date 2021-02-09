@@ -9,8 +9,22 @@
   </head>
 
   <body>
-    <div class="score-box">Score Box</div>
-    <canvas id="myCanvas" width="340" height="600"></canvas>
-    <script src="./dist/main.js"></script>
+    <div id="left-side">
+      <div id="instructions">
+          <p>INSTRUCTIONS</p>        
+      </div>
+      
+      <div class="score-box">Score Box</div>
+    </div>
+    <div id="scroll-background">
+        <div id="scroll-top">
+          <div class="instructions-text">
+            <p>Instructions:</p>
+            <p>In this game, the objective is clear: click the falling tiles at the right time, and play the music that it unravels! Your score will be added each time you press at the right time. press "a, s, d, f" to get the tiles from the left to right column.</p>
+          </div>
+        </div>
+      </div>
+    <canvas id="myCanvas" width="400" height="600"></canvas>
+    <script src="dist/main.js"></script>
   </body>
 </html>
