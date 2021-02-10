@@ -41,12 +41,14 @@ class Game {
     
     keyPressed(e) {
         if (e.keyCode === 65) {
-            this.bricks.every(brick => {
-                if (brick.x === 35 && brick.y < 600 && brick.y > 460) {    
+            this.bricks.forEach(brick => {
+                let pad = document.getElementById("pad");  
+                if (brick.x === 35 && brick.y < 600 && brick.y > 460) { 
                     this.score += 10;
                     const synth = new Tone.Synth().toDestination();
                     synth.triggerAttackRelease(brick.tone, brick.length);
-                    this.updateScore();
+                    pad.style.backgroundColor = "lightgrey";
+                    pad.style.opacity = 0.4;
                 }
             })
         } else if (e.keyCode === 83) {
