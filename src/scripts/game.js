@@ -29,11 +29,13 @@ class Game {
     }
 
     startGame(){
+        // debugger
+        // this.brick
         this.showScore();
         this.intervalId = setInterval(this.draw, 30);
     }
     showScore(){
-        document.getElementById("score-box").innerText = `Score: ${this.score}`;
+        document.getElementById("score-box").innerText = `Score: 0`;
     }
     drawPad() {
         this.ctx.beginPath();
@@ -148,6 +150,7 @@ class Game {
                     document.getElementById("final-score-background").style.display = "none"
                 }
             }
+            this.brick = new Brick(this);
         }
     }
 
@@ -155,7 +158,24 @@ class Game {
         clearInterval(this.intervalId);
         let finalScore = document.getElementById("final-score-text");
         finalScore.innerText = `Game Over! Your final Score is: ${this.score}`;
+        let tryAgain = document.createElement('button');
+        tryAgain.setAttribute("id", "try-again");
+        tryAgain.innerText = "Try Again"
+        tryAgain.style.fontFamily = "Source Code Pro, monospace";
+        tryAgain.style.backgroundColor = "white";
+        tryAgain.style.marginTop = "10px";
+        tryAgain.style.color = "black";
+        tryAgain.style.border = "solid, black, 3px";
+        tryAgain.style.borderRadius = "5px";
+        finalScore.appendChild(tryAgain);
         document.getElementById("final-score-background").style.display = "block";
+        tryAgain.addEventListener(
+                "click", () => {
+                document.getElementById("try-again").style.display = "none";
+                this.startGame();      
+                document.getElementById("final-score-background").style.display = "none";
+            }
+        )
     }
 }
 
