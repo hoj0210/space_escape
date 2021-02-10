@@ -48,8 +48,8 @@ class Game {
                     const synth = new Tone.Synth().toDestination();
                     synth.triggerAttackRelease(brick.tone, brick.length);
                     this.updateScore();
-                    // pad.style.backgroundColor = "lightgrey";
-                    // pad.style.opacity = 0.4;
+                    pad.style.backgroundColor = "lightgrey";
+                    pad.style.opacity = 0.4;
                 }
             })
         } else if (e.keyCode === 83) {
