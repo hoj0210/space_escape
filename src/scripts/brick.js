@@ -26,8 +26,6 @@ class Brick {
                 {x: 197, y: -140, start: -140, tone: "F3", length: "4n", countTime: 315},
                 {x: 278, y: -140, start: -140, tone: "E3", length: "4n", countTime: 350},
                 {x: 116, y: -140, start: -140, tone: "E3", length: "4n", countTime: 385},
-                // {x: 278, y: -140, start: -140, tone: , length: , countTime: 420},
-                // {x: 35, y: -140, start: -140, tone: , length: , countTime: 455},
                 {x: 35, y: -70, start: -70, tone: "D3", length: "8n", countTime: 420},
                 {x: 197, y: -70, start: -70, tone: "E3", length: "8n", countTime: 437.5},
                 {x: 116, y: -70, start: -70, tone: "F3", length: "8n", countTime: 455},
@@ -73,8 +71,9 @@ class Brick {
                 {x: 197, y: -140, start: -140, tone: "E3", length: "4n", countTime: 1470},
                 {x: 278, y: -140, start: -140, tone: "E3", length: "4n", countTime: 1505},
                 {x: 197, y: -140, start: -140, tone: "D3", length: "4n", countTime: 1540},
-                {x: 116, y: -140, start: -140, tone: "D3", length: "4n", countTime: 1575},
+                {x: 116, y: -140, start: -140, tone: "G2", length: "4n", countTime: 1575},
                 {x: 35, y: -280, start: -280, tone: "C3", length: "2n", countTime: 1610},
+                {x: 278, y: -280, start: -280, tone: "G3", length: "2n", countTime: 1610}
             ]
     }
 

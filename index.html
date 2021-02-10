@@ -18,20 +18,27 @@
       
       <div id="score-box">Your Score</div>
     </div>
-    <div id="instruction-background">
-        <div id="instruction-container-top">
-          <div class="instructions-text">
-            <p>Instructions:</p>
-            <p>Mayday! Mayday! Ship is under attack. Must destroy all the foreign ships that are coming down. If the song is played perfectly, you escape successfully!</p>
+    <div class="main-container">
+      <canvas id="myCanvas" width="400" height="600"></canvas>
+      <div id="start-game-page">
+        <p class="start-game-text">Press "Enter" to start the Battle!</p>
+      </div>
+      <div id="instruction-background">
+          <div id="instruction-container-top">
+            <div class="instructions-text">
+              <p>Instructions:</p>
+              <p>Mayday! Mayday! Ship is under attack. Must destroy all the foreign ships that are coming down. If the song is played perfectly, you escape successfully!</p>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-      <div class="main-container">
-        <canvas id="myCanvas" width="400" height="600"></canvas>
-        <div id="start-game-page">
-          <p class="start-game-text">Press "Enter" to start the Battle!</p>
+    <div id="final-score-background">
+      <div id="final-score-container-top">
+        <div id="final-score-text">
+          <button id="try-again-btn">Try Again</button>
         </div>
       </div>
+    </div>
       <div id="pad"></div>
     <script src="dist/main.js"></script>
   </body>
