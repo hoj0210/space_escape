@@ -9,9 +9,14 @@ class Game {
         this.drawPad = this.drawPad.bind(this);
         this.onScreenBricks = this.onScreenBricks.bind(this);
         this.stopGame = this.stopGame.bind(this);
+        this.showScore = this.showScore.bind(this);
+        this.updateScore = this.updateScore.bind(this);
         this.bricks = [];
         this.intervalId = 0;
         this.every = false;
+        this.score = 0;
+        this.keyPressed = this.keyPressed.bind(this);
+        document.addEventListener('keydown', e => this.keyPressed(e), true);
     }
 
     onScreenBricks(y){
@@ -20,15 +25,61 @@ class Game {
     }
 
     startGame(){
-        this.intervalId = setInterval(this.draw, 30)
+        this.showScore();
+        this.intervalId = setInterval(this.draw, 30);
     }
-
+    showScore(){
+        document.getElementById("score-box").innerText = `Score: ${this.score}`;
+    }
     drawPad() {
         this.ctx.beginPath();
         this.ctx.rect(0, this.canvas.height - 140, this.canvas.width, 140);
         this.ctx.stroke();
     }
-
+    
+    keyPressed(e) {
+        debugger
+        if (e.keyCode === 65) {
+            this.bricks.forEach(brick => {
+                debugger
+                if (brick.x === 35 && brick.y < 600 && brick.y > 460) {
+                    debugger
+                    this.score += 10;
+                } else {
+                    debugger
+                    this.score -= 5;
+                }
+                this.updateScore();
+            })
+        } else if (e.keyCode === 83) {
+            this.bricks.forEach(brick => {
+                if (brick.x === 116 && brick.y < 600 && brick.y > 460) {
+                    this.score += 10;
+                } else {
+                    this.score -= 5;
+                }
+            })
+        } else if (e.keyCode === 68) {
+            this.bricks.forEach(brick => {
+                if (brick.x === 197 && brick.y < 600 && brick.y > 460) {
+                    this.score += 10;
+                } else {
+                    this.score -= 5;
+                }
+            })
+        } else if (e.keyCode === 70) {
+            this.bricks.forEach(brick => {
+                if (brick.x === 278 && brick.y < 600 && brick.y > 460) {
+                    this.score += 10;
+                } else {
+                    this.score -= 5;
+                }
+            })
+        }
+    }
+    updateScore(){
+        document.getElementById("score-box").innerText = `Score: ${this.score}`
+    }
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.drawPad();
@@ -46,7 +97,6 @@ class Game {
             }
             
         })
-        console.log(this.bricks);
         this.brick.count += 1;
 
         this.brick.initialValues.forEach(el => {

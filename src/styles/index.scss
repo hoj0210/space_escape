@@ -16,15 +16,17 @@ body{
   background-image: url(../assets/game_background.png);
 }
 
-.score-box{
+#score-box{
   border: 3px solid white;
   border-radius: 5px;
-  height: 100px;
-  width: 100px;
+  height: 43px;
+  width: 160px;
   margin-right: 50px;
   margin-top: 50px;
   color: white;
   font-family: 'Source Code Pro', monospace;
+  padding-top: 18px;
+  padding-left: 15px;
 }
 
 #instruction-background{
@@ -43,7 +45,7 @@ body{
    position: absolute;
    border-radius: 5px;
    width: 350px;
-   top: 30%;
+   top: 40%;
    left: 50%;
    transform: translate(-50%, -50%);  
    display: flex;
@@ -61,6 +63,7 @@ body{
   border: 3px solid white;
   padding-left: 15px;
   border-radius: 5px;
+  width: 130px;
 }
 
 #instructions:hover{
