@@ -25,7 +25,6 @@ body{
   margin-top: 50px;
   color: white;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
 }
 
 #instruction-background{
@@ -70,4 +69,25 @@ body{
   color: black;
   cursor: pointer;
   border: 3px solid rgb(41, 41, 41);
+}
+
+#start-game-page{
+  position: absolute;
+  background-image: url(../assets/space_corridor.jpg);
+  width: 400px;
+  height: 600px;
+  top: 111px;
+
+}
+.start-game-text{
+  margin-top: 260px;
+  margin-left: 47px;
+}
+.main-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+ 
 }
