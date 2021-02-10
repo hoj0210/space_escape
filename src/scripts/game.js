@@ -1,4 +1,6 @@
+import * as Tone from 'tone';
 import Brick from "./brick";
+
 class Game {
     constructor(){
         this.brick = new Brick(this)
@@ -38,42 +40,41 @@ class Game {
     }
     
     keyPressed(e) {
-        debugger
         if (e.keyCode === 65) {
-            this.bricks.forEach(brick => {
-                debugger
-                if (brick.x === 35 && brick.y < 600 && brick.y > 460) {
-                    debugger
+            this.bricks.every(brick => {
+                if (brick.x === 35 && brick.y < 600 && brick.y > 460) {    
                     this.score += 10;
-                } else {
-                    debugger
-                    this.score -= 5;
+                    const synth = new Tone.Synth().toDestination();
+                    synth.triggerAttackRelease(brick.tone, brick.length);
+                    this.updateScore();
                 }
-                this.updateScore();
             })
         } else if (e.keyCode === 83) {
             this.bricks.forEach(brick => {
                 if (brick.x === 116 && brick.y < 600 && brick.y > 460) {
                     this.score += 10;
-                } else {
-                    this.score -= 5;
-                }
+                    const synth1 = new Tone.Synth().toDestination();
+                    synth1.triggerAttackRelease(brick.tone, brick.length);
+                    this.updateScore();
+                } 
             })
         } else if (e.keyCode === 68) {
             this.bricks.forEach(brick => {
                 if (brick.x === 197 && brick.y < 600 && brick.y > 460) {
                     this.score += 10;
-                } else {
-                    this.score -= 5;
-                }
+                    const synth2 = new Tone.Synth().toDestination();
+                    synth2.triggerAttackRelease(brick.tone, brick.length);
+                    this.updateScore();
+                } 
             })
         } else if (e.keyCode === 70) {
             this.bricks.forEach(brick => {
                 if (brick.x === 278 && brick.y < 600 && brick.y > 460) {
                     this.score += 10;
-                } else {
-                    this.score -= 5;
-                }
+                    const synth3 = new Tone.Synth().toDestination();
+                    synth3.triggerAttackRelease(brick.tone, brick.length);
+                    this.updateScore();
+                } 
             })
         }
     }
