@@ -32,6 +32,7 @@ class Game {
         // debugger
         // this.brick
         this.showScore();
+        this.score = 0;
         this.intervalId = setInterval(this.draw, 30);
     }
     showScore(){
@@ -167,6 +168,7 @@ class Game {
         tryAgain.style.color = "black";
         tryAgain.style.border = "solid, black, 3px";
         tryAgain.style.borderRadius = "5px";
+        tryAgain.style.outline = "none";
         finalScore.appendChild(tryAgain);
         document.getElementById("final-score-background").style.display = "block";
         tryAgain.addEventListener(
