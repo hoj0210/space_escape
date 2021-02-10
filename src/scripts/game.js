@@ -7,10 +7,20 @@ class Game {
         this.draw = this.draw.bind(this);
         this.startGame = this.startGame.bind(this);
         this.drawPad = this.drawPad.bind(this);
+        this.onScreenBricks = this.onScreenBricks.bind(this);
+        this.stopGame = this.stopGame.bind(this);
+        this.bricks = [];
+        this.intervalId = 0;
+        this.every = false;
+    }
+
+    onScreenBricks(y){
+        if (y > this.canvas.height) return false;
+        else return true;
     }
 
     startGame(){
-        setInterval(this.draw, 30)
+        this.intervalId = setInterval(this.draw, 30)
     }
 
     drawPad() {
@@ -24,14 +34,36 @@ class Game {
         this.drawPad();
         this.brick.initialValues.forEach(el => {
             this.brick.drawBrick(el.x, el.y, el.start, el.countTime);
-            if (this.brick.count >= el.countTime) {
-            el.y += this.brick.dy;
+            if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
+                el.y += this.brick.dy;
+                if (!this.bricks.includes(el)) this.bricks.push(el);
+            } else {
+                for (let i = 0; i < this.bricks.length; i++) {
+                    if (this.bricks[i] === el) {
+                        this.bricks.splice(i, 1);
+                    }
+                }
+            }
+            
+        })
+        console.log(this.bricks);
+        this.brick.count += 1;
+
+        this.brick.initialValues.forEach(el => {
+            if (el.y <= this.canvas.height) {
+                this.every = false;
+            } else {
+                this.every = true;
             }
         })
-        this.brick.count += 1;
+        if (this.every) {
+            this.stopGame();
+        }
     }
 
-    
+    stopGame(){
+        clearInterval(this.intervalId);
+    }
 }
 
 export default Game;

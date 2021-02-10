@@ -101,11 +101,6 @@ document.addEventListener("keydown", e => {
 //   }
 // }
 
-function drawPad() {
-  ctx.beginPath();
-  ctx.rect(0, canvas.height - 140, canvas.width, 140);
-  ctx.stroke();
-}
 // document.addEventListener("keydown", keyPressed, false);
 // function keyPressed(e) {
 //   debugger
