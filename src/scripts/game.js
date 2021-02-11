@@ -55,7 +55,7 @@ class Game {
         //                 synth.triggerAttackRelease(brick.tone, brick.length);
         //                 this.updateScore();
         //                 this.pad.style.backgroundColor = "lightgray";
-        //                 this.pad.style.opacity = "0.4";
+        //                 this.pad.style.opacity = "0.5";
         //             }
         //         }
         //     })
@@ -69,7 +69,7 @@ class Game {
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.4";
+                        this.pad.style.opacity = "0.5";
                     }
                 }
             })
@@ -82,8 +82,8 @@ class Game {
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.4";
-                    }
+                        this.pad.style.opacity = "0.5";
+                    } 
                 }
             })
         } else if (e.keyCode === 68) {
@@ -95,8 +95,8 @@ class Game {
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.4";
-                    }
+                        this.pad.style.opacity = "0.5";
+                    } 
                 } 
             })
         } else if (e.keyCode === 70) {
@@ -108,17 +108,25 @@ class Game {
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.4";
-                    }
+                        this.pad.style.opacity = "0.5";
+                    } 
                 }
             })
+        } else {
+            if (e.keyCode !== 13 ) {
+                this.pad.style.backgroundColor = "rgb(255, 71, 71)";
+                this.pad.style.opacity = "0.5";
+                const synth = new Tone.Synth().toDestination();
+                synth.triggerAttackRelease("B4", "8n");
+            }
         }
     }
 
     keyUnpressed (e) {
-        if (e.keyCode === 65 || e.keyCode === 83 || e.keyCode === 68 || e.keyCode === 70) {
-            this.pad.style.backgroundColor = "transparent";
-        }
+        this.pad.style.backgroundColor = "transparent"
+        // if (e.keyCode === 65 || e.keyCode === 83 || e.keyCode === 68 || e.keyCode === 70) {
+        //     this.pad.style.backgroundColor = "transparent";
+        // }
     }
     updateScore(){
         document.getElementById("score-box").innerText = `Score: ${this.score}`
