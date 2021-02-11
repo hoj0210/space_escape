@@ -17,6 +17,7 @@ class Game {
         this.intervalId = 0;
         this.every = false;
         this.score = 0;
+        this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
         this.keyUnpressed = this.keyUnpressed.bind(this);
         document.addEventListener('keydown', e => this.keyPressed(e), true);
@@ -48,65 +49,89 @@ class Game {
         if (e.keyCode === 65) {
             this.bricks.forEach(brick => {  
                 if (brick.x === 35 ) {
-                    if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(brick.tone, brick.length);
-                        this.updateScore();
-                    } else if (brick.y < 600 && brick.y > 460) {
+                    if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                     }
+                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // } else if (brick.y < 600 && brick.y > 460) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // }
                 }
             })
         } else if (e.keyCode === 83) {
             this.bricks.forEach(brick => {
                 if (brick.x === 116) {
-                    if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(brick.tone, brick.length);
-                        this.updateScore();
-                    } else if (brick.y < 600 && brick.y > 460) {
+                    if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                     }
+                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // } else if (brick.y < 600 && brick.y > 460) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // }
                 }
             })
         } else if (e.keyCode === 68) {
             this.bricks.forEach(brick => {
                 if (brick.x === 197) {
-                    if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(brick.tone, brick.length);
-                        this.updateScore();
-                    } else if (brick.y < 600 && brick.y > 460) {
+                    if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                     }
+                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // } else if (brick.y < 600 && brick.y > 460) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // }
                 } 
             })
         } else if (e.keyCode === 70) {
             this.bricks.forEach(brick => {
                 if (brick.x === 278 ) {
-                    if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(brick.tone, brick.length);
-                        this.updateScore();
-                    } else if (brick.y < 600 && brick.y > 460) {
+                    if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                     }
+                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // } else if (brick.y < 600 && brick.y > 460) {
+                    //     this.score += 10;
+                    //     const synth = new Tone.Synth().toDestination();
+                    //     synth.triggerAttackRelease(brick.tone, brick.length);
+                    //     this.updateScore();
+                    // }
                 }
             })
         }

@@ -5,13 +5,30 @@ body{
   height: 100%;
   width: 100%;
 }
-
+#header{
+  border-bottom: 3px solid white;
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 32px;
+  color: white;
+}
 #the-real-body{
   display: flex;
   justify-content: center;
-  
 }
-
+i{
+  color: white;
+}
+a{
+  color: black;
+}
+.author{
+  min-width: 470px;
+}
+.author-links{
+  min-width: 130px;
+}
 #myCanvas{
   position: relative;
   top: 100px;
@@ -56,12 +73,12 @@ body{
 }
 
 #instruction-container-top{
-  background-image: url(../assets/space_background2.jpg);
+  background-color: white;
    position: absolute;
    border-radius: 5px;
    width: 350px;
-   top: 40%;
-   left: 45.25%;
+   top: 57%;
+   left: 44.3%;
    transform: translate(-50%, -50%);  
    display: flex;
    flex-direction: column;
@@ -114,7 +131,7 @@ body{
   background-image: url(../assets/space_corridor.jpg);
   width: 400px;
   height: 600px;
-  top: 131px;
+  top: 154px;
   z-index: 5;
 }
 .start-game-text{
