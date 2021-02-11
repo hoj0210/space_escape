@@ -46,6 +46,20 @@ class Game {
     }
     
     keyPressed(e) {
+        // if (e.keyCode === 65 || e.keyCode === 83 || e.keyCode === 68 || e.keyCode === 70) {
+        //     this.bricks.forEach(brick => {  
+        //         if (brick.x === 35 || brick.x === 116 || brick.x === 197 || brick.x === 278 ) {
+        //             if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
+        //                 this.score += 10;
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease(brick.tone, brick.length);
+        //                 this.updateScore();
+        //                 this.pad.style.backgroundColor = "lightgray";
+        //                 this.pad.style.opacity = "0.4";
+        //             }
+        //         }
+        //     })
+        // }
         if (e.keyCode === 65) {
             this.bricks.forEach(brick => {  
                 if (brick.x === 35 ) {
@@ -54,18 +68,9 @@ class Game {
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
+                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        this.pad.style.opacity = "0.4";
                     }
-                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // } else if (brick.y < 600 && brick.y > 460) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // }
                 }
             })
         } else if (e.keyCode === 83) {
@@ -76,18 +81,9 @@ class Game {
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
+                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        this.pad.style.opacity = "0.4";
                     }
-                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // } else if (brick.y < 600 && brick.y > 460) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // }
                 }
             })
         } else if (e.keyCode === 68) {
@@ -98,18 +94,9 @@ class Game {
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
+                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        this.pad.style.opacity = "0.4";
                     }
-                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // } else if (brick.y < 600 && brick.y > 460) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // }
                 } 
             })
         } else if (e.keyCode === 70) {
@@ -120,25 +107,18 @@ class Game {
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
+                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        this.pad.style.opacity = "0.4";
                     }
-                    // if (brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // } else if (brick.y < 600 && brick.y > 460) {
-                    //     this.score += 10;
-                    //     const synth = new Tone.Synth().toDestination();
-                    //     synth.triggerAttackRelease(brick.tone, brick.length);
-                    //     this.updateScore();
-                    // }
                 }
             })
         }
     }
 
     keyUnpressed (e) {
-        
+        if (e.keyCode === 65 || e.keyCode === 83 || e.keyCode === 68 || e.keyCode === 70) {
+            this.pad.style.backgroundColor = "transparent";
+        }
     }
     updateScore(){
         document.getElementById("score-box").innerText = `Score: ${this.score}`
