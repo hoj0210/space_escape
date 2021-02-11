@@ -9,48 +9,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
     <title>Rain Song</title>
   </head>
-
+  
   <body>
-    <div id="left-side">
-      <div id="instructions">
-          <p>INSTRUCTIONS</p>        
-      </div>
-      
-      <div id="score-box">Your Score</div>
+    <div>
+      Hey!
     </div>
-    <div class="main-container">
-      <canvas id="myCanvas" width="400" height="600"></canvas>
-      <div id="start-game-page">
-        <p class="start-game-text">Press "Enter" to start the Battle!</p>
+    <div id="the-real-body">
+      <div id="left-side">
+        <div id="instructions">
+            <p>INSTRUCTIONS</p>        
+        </div>
+        <div id="score-box">Your Score</div>
       </div>
-      <div id="instruction-background">
-          <div id="instruction-container-top">
-            <div class="instructions-text">
-              <p>Instructions:</p>
-              <p>Mayday! Mayday! Ship is under attack. Must destroy all the foreign ships that are coming down. If the song is played perfectly, you escape successfully!</p>
-              <div class = "rule-pic">
-                <img src="src/assets/how_to_play.png" alt="">
-                <p class="rule1">* NOTE: Make sure to press after the spacecraft crosses the white line shown for best aim!</p>
-              </div>
-              
-              <div class="rule-box">
-                <p class="rules">Press keyboard "a" to attack the first column</p>
-                <p class="rules">Press keyboard "s" to attack the second column</p>
-                <p class="rules">Press keyboard "d" to attack the second column</p>
-                <p class="rules">Press keyboard "f" to attack the second column</p>
+      <div class="main-container">
+        <canvas id="myCanvas" width="400" height="600"></canvas>
+        <div id="start-game-page">
+          <p class="start-game-text">Press "Enter" to start the Battle!</p>
+        </div>
+        <div id="instruction-background">
+            <div id="instruction-container-top">
+              <div class="instructions-text">
+                <p>Instructions:</p>
+                <p>Mayday! Mayday! Ship is under attack. Must destroy all the foreign ships that are coming down. If the song is played perfectly, you escape successfully!</p>
+                <div class = "rule-pic">
+                  <img src="src/assets/how_to_play.png" alt="">
+                  <p class="rule1">* NOTE: Make sure to press after the spacecraft crosses the white line shown for best aim!</p>
+                </div>
+                
+                <div class="rule-box">
+                  <p class="rules">Press keyboard "a" to attack the first column</p>
+                  <p class="rules">Press keyboard "s" to attack the second column</p>
+                  <p class="rules">Press keyboard "d" to attack the second column</p>
+                  <p class="rules">Press keyboard "f" to attack the second column</p>
+                </div>
               </div>
             </div>
-          </div>
-      </div>
-    </div>
-    <div id="final-score-background">
-      <div id="final-score-container-top">
-        <div id="final-score-text">
-          <button id="try-again-btn">Try Again</button>
         </div>
       </div>
+      <div id="final-score-background">
+        <div id="final-score-container-top">
+          <div id="final-score-text">
+            <button id="try-again-btn">Try Again</button>
+          </div>
+        </div>
+      </div>
+        <div id="pad"></div>
+      <script src="dist/main.js"></script>
     </div>
-      <div id="pad"></div>
-    <script src="dist/main.js"></script>
+    
   </body>
 </html>

@@ -158,7 +158,7 @@ class Game {
     stopGame(){
         clearInterval(this.intervalId);
         let finalScore = document.getElementById("final-score-text");
-        finalScore.innerText = `Game Over! Your final Score is: ${this.score}`;
+        finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
         let tryAgain = document.createElement('button');
         tryAgain.setAttribute("id", "try-again");
         tryAgain.innerText = "Try Again"

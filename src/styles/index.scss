@@ -1,11 +1,15 @@
 body{
-  display: flex;
-  justify-content: center;
   background-image: url(../assets/space_background.jpg);
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
   width: 100%;
+}
+
+#the-real-body{
+  display: flex;
+  justify-content: center;
+  
 }
 
 #myCanvas{
@@ -52,7 +56,7 @@ body{
 }
 
 #instruction-container-top{
-  background-color: white;
+  background-image: url(../assets/space_background2.jpg);
    position: absolute;
    border-radius: 5px;
    width: 350px;
@@ -110,7 +114,7 @@ body{
   background-image: url(../assets/space_corridor.jpg);
   width: 400px;
   height: 600px;
-  top: 111px;
+  top: 131px;
   z-index: 5;
 }
 .start-game-text{
