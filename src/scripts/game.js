@@ -17,7 +17,7 @@ class Game {
         this.intervalId = 0;
         this.every = false;
         this.score = 0;
-        this.nextLevel = 2;
+        this.nextLevel = 1;
         this.correct = false;
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
@@ -219,17 +219,20 @@ class Game {
                 document.getElementById("final-score-background").style.display = "none";
             }
         )
-        let fallSpeed = 15;
-        if (this.nextLevel === 3) {
-            fallSpeed = 10;
-        } else if (this.nextLevel === 4) {
-            fallSpeed = 5;
-        }
         nextLevel.addEventListener(
             "click", () => {
+                this.nextLevel += 1;
+                let fallSpeed = 30;
+                if (this.nextLevel === 2) {
+                    this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                    fallSpeed = 15;
+                } else if (this.nextLevel === 3) {
+                    fallSpeed = 10;
+                } else if (this.nextLevel === 4) {
+                    fallSpeed = 5;
+                }
                 this.startGame(fallSpeed);
                 document.getElementById("final-score-background").style.display = "none";
-                this.nextLevel += 1;
             }
         )
     }
