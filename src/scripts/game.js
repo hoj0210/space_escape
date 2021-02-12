@@ -214,8 +214,19 @@ class Game {
         finalScore.appendChild(nextLevel);
         document.getElementById("final-score-background").style.display = "block";
         tryAgain.addEventListener(
-                "click", () => {
-                this.startGame(30);      
+            "click", () => {
+                let fallSpeed = 30;
+                if (this.nextLevel === 2) {
+                    this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                    fallSpeed = 15;
+                } else if (this.nextLevel === 3) {
+                    this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
+                    fallSpeed = 10;
+                } else if (this.nextLevel === 4) {
+                    this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
+                    fallSpeed = 5;
+                }
+                this.startGame(fallSpeed);      
                 document.getElementById("final-score-background").style.display = "none";
             }
         )
