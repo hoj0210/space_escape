@@ -221,7 +221,7 @@ class Game {
                 "click", () => {
                     let fallSpeed = 30;
                     if (this.nextLevel === 2) {
-                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
                     } else if (this.nextLevel === 3) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
@@ -275,7 +275,7 @@ class Game {
                 "click", () => {
                     let fallSpeed = 30;
                     if (this.nextLevel === 2) {
-                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
                     } else if (this.nextLevel === 3) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
@@ -300,7 +300,7 @@ class Game {
                     whichLevel.style.bottom = "786px";
                     whichLevel.style.fontSize = "26px";
                     if (this.nextLevel === 2) {
-                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
                     } else if (this.nextLevel === 3) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
