@@ -43,7 +43,7 @@ a{
   height: 43px;
   width: 160px;
   margin-right: 50px;
-  margin-top: 50px;
+  margin-top: 40px;
   color: white;
   font-family: 'Source Code Pro', monospace;
   padding-top: 18px;
@@ -189,6 +189,7 @@ img {
   padding-top: 15px;
   padding-bottom: 15px;
   outline: none;
+  display: none;
 }
 
 #try-again-button:hover{
