@@ -218,7 +218,7 @@ class Game {
             document.getElementById("final-score-background").style.display = "block";
             tryAgain.addEventListener(
                 "click", () => {
-                    let fallSpeed = 30;
+                    let fallSpeed = 22;
                     if (this.nextLevel === 2) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
@@ -270,7 +270,7 @@ class Game {
             document.getElementById("final-score-background").style.display = "block";
             tryAgain.addEventListener(
                 "click", () => {
-                    let fallSpeed = 30;
+                    let fallSpeed = 22;
                     if (this.nextLevel === 2) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
@@ -294,7 +294,7 @@ class Game {
             nextLevel.addEventListener(
                 "click", () => {
                     this.nextLevel += 1;
-                    let fallSpeed = 30;
+                    let fallSpeed = 22;
                     let whichLevel = document.getElementById("which-level");
                     whichLevel.innerText = `LEVEL ${this.nextLevel}`;
                     whichLevel.style.fontFamily = "Source Code Pro, monospace";

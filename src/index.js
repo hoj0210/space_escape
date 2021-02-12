@@ -15,7 +15,7 @@ window.onclick= function(e) {
 }
 
 const game = new Game();
-const startSpeed = 30;
+const startSpeed = 22;
 document.addEventListener("keydown", e => {
   if (e.key === "Enter") {
     document.getElementById("start-game-page").style.display = "none";
