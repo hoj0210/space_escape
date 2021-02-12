@@ -19,6 +19,7 @@ class Game {
         this.score = 0;
         this.nextLevel = 1;
         this.correct = false; 
+        this.replay = false;
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
         this.keyUnpressed = this.keyUnpressed.bind(this);
@@ -31,6 +32,7 @@ class Game {
     restartGame(e) {
         const restart = document.getElementById('try-again-button');
         if (e.target === restart) {
+            this.replay = true;
             this.stopGame();
         }
     }
@@ -198,72 +200,121 @@ class Game {
         clearInterval(this.intervalId);
         let finalScore = document.getElementById("final-score-text");
         finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
-        let tryAgain = document.createElement('button');
-        tryAgain.setAttribute("id", "try-again");
-        tryAgain.innerText = "Try Again"
-        tryAgain.style.fontFamily = "Source Code Pro, monospace";
-        tryAgain.style.backgroundColor = "white";
-        tryAgain.style.marginTop = "10px";
-        tryAgain.style.color = "black";
-        tryAgain.style.border = "solid, black, 3px";
-        tryAgain.style.borderRadius = "5px";
-        tryAgain.style.outline = "none";
-        finalScore.appendChild(tryAgain);
-        let nextLevel = document.createElement('button');
-        nextLevel.setAttribute("id", "next-level");
-        nextLevel.innerText = "Next Level";
-        nextLevel.style.fontFamily = "Source Code Pro, monospace";
-        nextLevel.style.backgroundColor = "white";
-        nextLevel.style.marginTop = "10px";
-        nextLevel.style.color = "black";
-        nextLevel.style.border = "solid, black, 3px";
-        nextLevel.style.borderRadius = "5px";
-        nextLevel.style.marginLeft = "20px";
-        nextLevel.style.outline = "none";
-        finalScore.appendChild(nextLevel);
-        document.getElementById("final-score-background").style.display = "block";
-        tryAgain.addEventListener(
-            "click", () => {
-                let fallSpeed = 30;
-                if (this.nextLevel === 2) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
-                    fallSpeed = 15;
-                } else if (this.nextLevel === 3) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
-                    fallSpeed = 10;
-                } else if (this.nextLevel === 4) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
-                    fallSpeed = 5;
+        if (this.replay) {
+            debugger
+            // clearInterval(this.intervalId);
+            // let finalScore = document.getElementById("final-score-text");
+            // finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
+            let tryAgain = document.createElement('button');
+            tryAgain.setAttribute("id", "try-again");
+            tryAgain.innerText = "Try Again"
+            tryAgain.style.fontFamily = "Source Code Pro, monospace";
+            tryAgain.style.backgroundColor = "white";
+            tryAgain.style.marginTop = "10px";
+            tryAgain.style.color = "black";
+            tryAgain.style.border = "solid, black, 3px";
+            tryAgain.style.borderRadius = "5px";
+            tryAgain.style.outline = "none";
+            finalScore.appendChild(tryAgain);
+            document.getElementById("final-score-background").style.display = "block";
+            tryAgain.addEventListener(
+                "click", () => {
+                    let fallSpeed = 30;
+                    if (this.nextLevel === 2) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        fallSpeed = 15;
+                    } else if (this.nextLevel === 3) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
+                        fallSpeed = 10;
+                    } else if (this.nextLevel === 4) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
+                        fallSpeed = 5;
+                    }
+                    this.startGame(fallSpeed);      
+                    document.getElementById("final-score-background").style.display = "none";
                 }
-                this.startGame(fallSpeed);      
-                document.getElementById("final-score-background").style.display = "none";
-            }
-        )
-        nextLevel.addEventListener(
-            "click", () => {
-                this.nextLevel += 1;
-                let fallSpeed = 30;
-                let whichLevel = document.getElementById("which-level");
-                whichLevel.innerText = `LEVEL ${this.nextLevel}`;
-                whichLevel.style.fontFamily = "Source Code Pro, monospace";
-                whichLevel.style.color = "white";
-                whichLevel.style.position = "absolute";
-                whichLevel.style.bottom = "786px";
-                whichLevel.style.fontSize = "26px";
-                if (this.nextLevel === 2) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
-                    fallSpeed = 15;
-                } else if (this.nextLevel === 3) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
-                    fallSpeed = 10;
-                } else if (this.nextLevel === 4) {
-                    this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
-                    fallSpeed = 5;
+            )
+            this.replay = false;
+        } else if (this.nextLevel === 4) {
+            debugger
+            let lastLevelText = document.getElementById("last-level-score-text");
+            lastLevelText.innerText = "You have successfully escaped! Game Over";
+            lastLevelText.style.marginTop = "12px";
+            document.getElementById("final-score-container-top").style.width = "400px";
+            document.getElementById("final-score-background").style.display = "block";
+        } else {
+            debugger
+            // clearInterval(this.intervalId);
+            // let finalScore = document.getElementById("final-score-text");
+            // finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
+            let tryAgain = document.createElement('button');
+            tryAgain.setAttribute("id", "try-again");
+            tryAgain.innerText = "Try Again"
+            tryAgain.style.fontFamily = "Source Code Pro, monospace";
+            tryAgain.style.backgroundColor = "white";
+            tryAgain.style.marginTop = "10px";
+            tryAgain.style.color = "black";
+            tryAgain.style.border = "solid, black, 3px";
+            tryAgain.style.borderRadius = "5px";
+            tryAgain.style.outline = "none";
+            finalScore.appendChild(tryAgain);
+            let nextLevel = document.createElement('button');
+            nextLevel.setAttribute("id", "next-level");
+            nextLevel.innerText = "Next Level";
+            nextLevel.style.fontFamily = "Source Code Pro, monospace";
+            nextLevel.style.backgroundColor = "white";
+            nextLevel.style.marginTop = "10px";
+            nextLevel.style.color = "black";
+            nextLevel.style.border = "solid, black, 3px";
+            nextLevel.style.borderRadius = "5px";
+            nextLevel.style.marginLeft = "20px";
+            nextLevel.style.outline = "none";
+            finalScore.appendChild(nextLevel);
+            document.getElementById("final-score-background").style.display = "block";
+            tryAgain.addEventListener(
+                "click", () => {
+                    let fallSpeed = 30;
+                    if (this.nextLevel === 2) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        fallSpeed = 15;
+                    } else if (this.nextLevel === 3) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
+                        fallSpeed = 10;
+                    } else if (this.nextLevel === 4) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
+                        fallSpeed = 5;
+                    }
+                    this.startGame(fallSpeed);      
+                    document.getElementById("final-score-background").style.display = "none";
                 }
-                this.startGame(fallSpeed);
-                document.getElementById("final-score-background").style.display = "none";
-            }
-        )
+            )
+            nextLevel.addEventListener(
+                "click", () => {
+                    this.nextLevel += 1;
+                    let fallSpeed = 30;
+                    let whichLevel = document.getElementById("which-level");
+                    whichLevel.innerText = `LEVEL ${this.nextLevel}`;
+                    whichLevel.style.fontFamily = "Source Code Pro, monospace";
+                    whichLevel.style.color = "white";
+                    whichLevel.style.position = "absolute";
+                    whichLevel.style.bottom = "786px";
+                    whichLevel.style.fontSize = "26px";
+                    if (this.nextLevel === 2) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
+                        fallSpeed = 15;
+                    } else if (this.nextLevel === 3) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_3_canvas.jpg)"
+                        fallSpeed = 10;
+                    } else if (this.nextLevel === 4) {
+                        this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
+                        fallSpeed = 5;
+                    }
+                    this.startGame(fallSpeed);
+                    document.getElementById("final-score-background").style.display = "none";
+                }
+            )
+
+        }
     }
 }
 
