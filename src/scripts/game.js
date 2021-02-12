@@ -17,7 +17,7 @@ class Game {
         this.intervalId = 0;
         this.every = false;
         this.score = 0;
-        this.nextLevel = 1;
+        this.nextLevel = 2;
         this.correct = false;
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
@@ -220,10 +220,10 @@ class Game {
             }
         )
         let fallSpeed = 15;
-        if (this.nextLevel === 2) {
+        if (this.nextLevel === 3) {
+            fallSpeed = 10;
+        } else if (this.nextLevel === 4) {
             fallSpeed = 5;
-        } else if (this.nextLevel === 3) {
-            fallSpeed = 2;
         }
         nextLevel.addEventListener(
             "click", () => {
