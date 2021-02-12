@@ -21,10 +21,11 @@ window.onclick= function(e) {
 }
 
 const game = new Game();
+const startSpeed = 30;
 document.addEventListener("keydown", e => {
   if (e.key === "Enter") {
     document.getElementById("start-game-page").style.display = "none";
     document.getElementById("try-again-button").style.display = "block";
-    game.startGame();
+    game.startGame(startSpeed);
   }
 })

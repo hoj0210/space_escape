@@ -30,12 +30,12 @@ class Game {
         else return true;
     }
 
-    startGame(){
+    startGame(speed){
         this.showScore();
         this.score = 0;
         this.bricks = [];
         this.brick = new Brick(this);
-        this.intervalId = setInterval(this.draw, 30);
+        this.intervalId = setInterval(this.draw, speed);
     }
     showScore(){
         document.getElementById("score-box").innerText = `Score: 0`;
@@ -199,11 +199,23 @@ class Game {
         tryAgain.style.borderRadius = "5px";
         tryAgain.style.outline = "none";
         finalScore.appendChild(tryAgain);
+        let nextLevel = document.createElement('button');
+        nextLevel.setAttribute("id", "next-level");
+        nextLevel.innerText = "Next Level";
+        nextLevel.style.fontFamily = "Source Code Pro, monospace";
+        nextLevel.style.backgroundColor = "white";
+        nextLevel.style.marginTop = "10px";
+        nextLevel.style.color = "black";
+        nextLevel.style.border = "solid, black, 3px";
+        nextLevel.style.borderRadius = "5px";
+        nextLevel.style.marginLeft = "20px";
+        nextLevel.style.outline = "none";
+        finalScore.appendChild(nextLevel);
         document.getElementById("final-score-background").style.display = "block";
         tryAgain.addEventListener(
                 "click", () => {
                 document.getElementById("try-again").style.display = "none";
-                this.startGame();      
+                this.startGame(30);      
                 document.getElementById("final-score-background").style.display = "none";
             }
         )
