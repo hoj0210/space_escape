@@ -20,6 +20,13 @@ document.addEventListener("keydown", e => {
   if (e.key === "Enter") {
     document.getElementById("start-game-page").style.display = "none";
     document.getElementById("try-again-button").style.display = "block";
+    let whichLevel = document.getElementById("which-level");
+    whichLevel.innerText = `LEVEL ${game.nextLevel}`;
+    whichLevel.style.fontFamily = "Source Code Pro, monospace";
+    whichLevel.style.color = "white";
+    whichLevel.style.position = "absolute";
+    whichLevel.style.bottom = "845px";
+    whichLevel.style.fontSize = "26px";
     game.startGame(startSpeed);
   }
 })
