@@ -17,6 +17,7 @@ class Game {
         this.intervalId = 0;
         this.every = false;
         this.score = 0;
+        this.correct = false;
         // this.pressed = false;
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
@@ -46,49 +47,48 @@ class Game {
         this.ctx.rect(0, this.canvas.height - 140, this.canvas.width, 140);
         this.ctx.stroke();
     }
-    
     keyPressed(e) {
-        // if (e.keyCode === 65 || e.keyCode === 83 || e.keyCode === 68 || e.keyCode === 70) {
-        //     this.bricks.forEach(brick => {  
-        //         if (brick.x === 35 || brick.x === 116 || brick.x === 197 || brick.x === 278 ) {
-        //             if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
-        //                 this.score += 10;
-        //                 const synth = new Tone.Synth().toDestination();
-        //                 synth.triggerAttackRelease(brick.tone, brick.length);
-        //                 this.updateScore();
-        //                 this.pad.style.backgroundColor = "lightgray";
-        //                 this.pad.style.opacity = "0.5";
-        //             }
-        //         }
-        //     })
-        // }
+
         if (e.keyCode === 65) {
             debugger
-            let correct = false;
+            const that = this;
+            // this.correct = false;
             this.bricks.forEach(brick => {  
                 if (brick.x === 35 ) {
-                    if ((brick.start === -280 && !this.pressed && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
-                        correct = true;
-                        this.score += 10;
+                    if ((brick.start === -280 && !that.pressed && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
+                        brick.correct = true;
+                        that.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
-                        this.updateScore();
-                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.5";
-                        // this.pressed = true;
-                    }
-                    if (!correct) {
+                        that.updateScore();
+                        that.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        that.pad.style.opacity = "0.5";
+                        let brickHeight = 0;
+                        if (brick.start === -140) {
+                            debugger
+                            brickHeight = that.brick.rectHeight;
+                        } else if (brick.start === -280 ) {
+                            brickHeight = that.brick.rectHeight2;
+                        } else if (brick.start === -70) {
+                            brickHeight = that.brick.rectHeightHalf;
+                        };
                         debugger
-                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        this.pad.style.opacity = "0.5";
+                        // that.brick.drawExplosion(brick.x, brick.y, that.brick.rectWidth, brickHeight);
+                        // that.pressed = true;
+                    }
+                    if (!brick.correct) {
+                        debugger
+                        that.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                        that.pad.style.opacity = "0.5";
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease("B4", "8n")
-                        correct = true;
                     }
+                    // that.correct = false;
                 }
                 
             })
         } else if (e.keyCode === 83) {
+            const that = this;
             let correct = false;
             this.bricks.forEach(brick => {
                 if (brick.x === 116) {
@@ -180,7 +180,7 @@ class Game {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.drawPad();
         this.brick.initialValues.forEach(el => {
-            this.brick.drawBrick(el.x, el.y, el.start, el.countTime);
+            this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
             if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
                 el.y += this.brick.dy;
                 if (!this.bricks.includes(el)) this.bricks.push(el);
