@@ -34,6 +34,7 @@ class Game {
         this.showScore();
         this.score = 0;
         this.bricks = [];
+        this.brick = new Brick(this);
         this.intervalId = setInterval(this.draw, 30);
     }
     showScore(){

@@ -176,3 +176,24 @@ img {
 .rule-box{
   margin-top: 18px;
 }
+
+#try-again-button{
+  border: solid 3px white;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  background-color: transparent;
+  padding-left: 10px;
+  width: 152px;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  outline: none;
+}
+
+#try-again-button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.7s;
+}
