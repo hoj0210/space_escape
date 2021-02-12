@@ -290,6 +290,7 @@ class Game {
             )
             nextLevel.addEventListener(
                 "click", () => {
+                    debugger
                     this.nextLevel += 1;
                     let fallSpeed = 30;
                     let whichLevel = document.getElementById("which-level");
@@ -297,7 +298,7 @@ class Game {
                     whichLevel.style.fontFamily = "Source Code Pro, monospace";
                     whichLevel.style.color = "white";
                     whichLevel.style.position = "absolute";
-                    whichLevel.style.bottom = "786px";
+                    whichLevel.style.bottom = "845px";
                     whichLevel.style.fontSize = "26px";
                     if (this.nextLevel === 2) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
