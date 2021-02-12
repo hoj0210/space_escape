@@ -3,12 +3,12 @@ import Game from './scripts/game';
 
 const instruct = document.getElementById("instructions");
 const scroll = document.getElementById('instruction-background');
-const restart = document.getElementById('try-again-button');
+// const restart = document.getElementById('try-again-button');
 
-restart.onclick = function() {
-  debugger
-  game.stopGame();
-}
+// restart.onclick = function() {
+//   debugger
+//   game.stopGame();
+// }
 
 instruct.onclick = function() {
   scroll.style.display = "block";

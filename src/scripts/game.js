@@ -18,12 +18,21 @@ class Game {
         this.every = false;
         this.score = 0;
         this.nextLevel = 1;
-        this.correct = false;
+        this.correct = false; 
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
         this.keyUnpressed = this.keyUnpressed.bind(this);
+        this.stopGame = this.stopGame.bind(this);
         document.addEventListener('keydown', e => this.keyPressed(e), true);
         document.addEventListener("keyup", e => this.keyUnpressed(e), true );
+        document.addEventListener("click", e => this.restartGame(e), true);
+    }
+
+    restartGame(e) {
+        const restart = document.getElementById('try-again-button');
+        if (e.target === restart) {
+            this.stopGame();
+        }
     }
 
     onScreenBricks(y){
