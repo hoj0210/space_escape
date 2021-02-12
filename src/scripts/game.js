@@ -50,50 +50,64 @@ class Game {
     keyPressed(e) {
 
         if (e.keyCode === 65) {
-            debugger
-            const that = this;
-            // this.correct = false;
-            this.bricks.forEach(brick => {  
-                if (brick.x === 35 ) {
-                    if ((brick.start === -280 && !that.pressed && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
-                        brick.correct = true;
-                        that.score += 10;
+            for (let i = 0; i < this.bricks.length; i++) {
+                if (this.bricks[i].x === 35) {
+                    if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {
+                        debugger
+                        this.bricks[i].correct = true;
+                        this.score += 10;
                         const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(brick.tone, brick.length);
-                        that.updateScore();
-                        that.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        that.pad.style.opacity = "0.5";
-                        let brickHeight = 0;
-                        if (brick.start === -140) {
-                            debugger
-                            brickHeight = that.brick.rectHeight;
-                        } else if (brick.start === -280 ) {
-                            brickHeight = that.brick.rectHeight2;
-                        } else if (brick.start === -70) {
-                            brickHeight = that.brick.rectHeightHalf;
-                        };
+                        synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+                        this.updateScore();
+                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                        this.pad.style.opacity = "0.5";
                         debugger
-                        // that.brick.drawExplosion(brick.x, brick.y, that.brick.rectWidth, brickHeight);
-                        // that.pressed = true;
-                    }
-                    if (!brick.correct) {
+                        break
+                    }    
+                    if (!this.bricks[i].correct) {
                         debugger
-                        that.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        that.pad.style.opacity = "0.5";
+                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                        this.pad.style.opacity = "0.5";
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease("B4", "8n")
                     }
-                    // that.correct = false;
                 }
+            }
+            debugger
+            // this.correct = false;
+            // this.bricks.forEach(brick => { 
+            //     if (brick.x === 35 ) {
+            //         if ((brick.start === -280 && !this.pressed && (brick.y + 140) < 600 && (brick.y + 140) > 460 ) || (brick.y < 600 && brick.y > 460)) {
+            //             debugger
+            //             brick.correct = true;
+            //             this.score += 10;
+            //             const synth = new Tone.Synth().toDestination();
+            //             synth.triggerAttackRelease(brick.tone, brick.length);
+            //             this.updateScore();
+            //             this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+            //             this.pad.style.opacity = "0.5";
+            //             debugger
+            //             // this.brick.drawExplosion(brick.x, brick.y, this.brick.rectWidth, brickHeight);
+            //             // this.pressed = true;
+            //         }
+            //         if (!brick.correct) {
+            //             debugger
+            //             this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+            //             this.pad.style.opacity = "0.5";
+            //             const synth = new Tone.Synth().toDestination();
+            //             synth.triggerAttackRelease("B4", "8n")
+            //         }
+            //         // this.correct = false;
+            //     }
                 
-            })
+            // })
         } else if (e.keyCode === 83) {
-            const that = this;
-            let correct = false;
+            // const that = this;
+            // let correct = false;
             this.bricks.forEach(brick => {
                 if (brick.x === 116) {
                     if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
-                        correct = true;
+                        brick.correct = true;
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
@@ -101,45 +115,45 @@ class Game {
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
                         this.pad.style.opacity = "0.5";
                     } 
-                    if (!correct) {
+                    if (!brick.correct) {
                         debugger
                         this.pad.style.backgroundColor = "rgb(255, 72, 72)";
                         this.pad.style.opacity = "0.5";
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease("B4", "8n")
-                        correct = true;
                     }
                 }
             })
         } else if (e.keyCode === 68) {
-            let correct = false;
+            // let correct = false;
             this.bricks.forEach(brick => {
                 if (brick.x === 197) {
                     if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
-                        correct = true;
+                        debugger
+                        brick.correct = true;
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
                         this.updateScore();
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
                         this.pad.style.opacity = "0.5";
+                        debugger
                     } 
-                    if (!correct) {
+                    if (!brick.correct) {
                         debugger
                         this.pad.style.backgroundColor = "rgb(255, 72, 72)";
                         this.pad.style.opacity = "0.5";
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease("B4", "8n")
-                        correct = true;
                     }
                 } 
             })
         } else if (e.keyCode === 70) {
-            let correct = false;
+            // let correct = false;
             this.bricks.forEach(brick => {
                 if (brick.x === 278 ) {
                     if ((brick.start === -280 && (brick.y + 140) < 600 && (brick.y + 140) > 460) || (brick.y < 600 && brick.y > 460)) {
-                        correct = true;
+                        brick.correct = true;
                         this.score += 10;
                         const synth = new Tone.Synth().toDestination();
                         synth.triggerAttackRelease(brick.tone, brick.length);
@@ -147,13 +161,12 @@ class Game {
                         this.pad.style.backgroundColor = "rgb(255, 255, 125)";
                         this.pad.style.opacity = "0.5";
                     } 
-                    if (!correct) {
+                    if (!brick.correct) {
                         debugger
                         this.pad.style.backgroundColor = "rgb(255, 72, 72)";
                         this.pad.style.opacity = "0.5";
                         const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease("B4", "8n")
-                        correct = true;
+                        synth.triggerAttackRelease("B4", "8n");
                     }
                 }
             })
@@ -180,6 +193,7 @@ class Game {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.drawPad();
         this.brick.initialValues.forEach(el => {
+            // debugger
             this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
             if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
                 el.y += this.brick.dy;
