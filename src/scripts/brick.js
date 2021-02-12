@@ -1,4 +1,4 @@
-import * as Tone from 'tone';
+
 class Brick {
     constructor(game) {
         this.game = game;
@@ -15,7 +15,6 @@ class Brick {
         this.count = 0;
         this.explode = new Image();
         this.explode.src = 'src/assets/explosion.png';
-        // this.drawExplosion = this.drawExplosion.bind(this);
         this.rectHeightHalf = 70;
         this.initialValues = [
                 {x: 35, y: -140, start: -140, tone: "C3", length: "4n", correct: false, countTime: 0},
@@ -79,15 +78,7 @@ class Brick {
                 {x: 278, y: -280, start: -280, tone: "G3", length: "2n", correct: false, countTime: 1610}
             ]
     }
-    // drawExplosion(x, y, rectWidth, rectHeight) {
-    //     this.game.ctx.beginPath();
-    //     this.game.ctx.drawImage(this.explode, x, y, rectWidth, rectHeight);
-    //     this.game.ctx.strokeStyle= 'white';
-    //     this.game.ctx.stroke();
-    //     this.game.ctx.linewidth = 2
-    //     this.game.ctx.strokeRect(x, y, rectWidth, rectHeight);
-    //     this.game.ctx.closePath();
-    // }
+ 
     drawBrick(x, y, start, countTime, correct) {
         if (this.count >= countTime) {
             this.game.ctx.beginPath();
