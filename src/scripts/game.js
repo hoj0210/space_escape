@@ -17,6 +17,7 @@ class Game {
         this.intervalId = 0;
         this.every = false;
         this.score = 0;
+        this.nextLevel = 1;
         this.correct = false;
         this.pad = document.getElementById('pad');
         this.keyPressed = this.keyPressed.bind(this);
@@ -214,9 +215,21 @@ class Game {
         document.getElementById("final-score-background").style.display = "block";
         tryAgain.addEventListener(
                 "click", () => {
-                document.getElementById("try-again").style.display = "none";
                 this.startGame(30);      
                 document.getElementById("final-score-background").style.display = "none";
+            }
+        )
+        let fallSpeed = 15;
+        if (this.nextLevel === 2) {
+            fallSpeed = 5;
+        } else if (this.nextLevel === 3) {
+            fallSpeed = 2;
+        }
+        nextLevel.addEventListener(
+            "click", () => {
+                this.startGame(fallSpeed);
+                document.getElementById("final-score-background").style.display = "none";
+                this.nextLevel += 1;
             }
         )
     }
