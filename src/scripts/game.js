@@ -223,6 +223,13 @@ class Game {
             "click", () => {
                 this.nextLevel += 1;
                 let fallSpeed = 30;
+                let whichLevel = document.getElementById("which-level");
+                whichLevel.innerText = `LEVEL ${this.nextLevel}`;
+                whichLevel.style.fontFamily = "Source Code Pro, monospace";
+                whichLevel.style.color = "white";
+                whichLevel.style.position = "absolute";
+                whichLevel.style.bottom = "786px";
+                whichLevel.style.fontSize = "26px";
                 if (this.nextLevel === 2) {
                     this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.jpg)"
                     fallSpeed = 15;
