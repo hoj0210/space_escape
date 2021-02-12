@@ -201,7 +201,6 @@ class Game {
         let finalScore = document.getElementById("final-score-text");
         finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
         if (this.replay) {
-            debugger
             // clearInterval(this.intervalId);
             // let finalScore = document.getElementById("final-score-text");
             // finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
@@ -236,14 +235,12 @@ class Game {
             )
             this.replay = false;
         } else if (this.nextLevel === 4) {
-            debugger
             let lastLevelText = document.getElementById("last-level-score-text");
             lastLevelText.innerText = "You have successfully escaped! Game Over";
             lastLevelText.style.marginTop = "12px";
             document.getElementById("final-score-container-top").style.width = "400px";
             document.getElementById("final-score-background").style.display = "block";
         } else {
-            debugger
             // clearInterval(this.intervalId);
             // let finalScore = document.getElementById("final-score-text");
             // finalScore.innerText = `Congrats! Your final Score is: ${this.score}`;
@@ -290,7 +287,6 @@ class Game {
             )
             nextLevel.addEventListener(
                 "click", () => {
-                    debugger
                     this.nextLevel += 1;
                     let fallSpeed = 30;
                     let whichLevel = document.getElementById("which-level");
