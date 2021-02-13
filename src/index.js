@@ -27,8 +27,8 @@ document.addEventListener("click", e => {
     whichLevel.style.fontFamily = "Source Code Pro, monospace";
     whichLevel.style.color = "white";
     whichLevel.style.position = "absolute";
-    whichLevel.style.bottom = "845px";
-    whichLevel.style.fontSize = "26px";
+    whichLevel.style.bottom = "715px";
+    whichLevel.style.fontSize = "32px";
     game.startGame(startSpeed, 1);
   } else if (e.target === canon) {
     document.getElementById("start-game-page").style.display = "none";
@@ -38,8 +38,8 @@ document.addEventListener("click", e => {
     whichLevel.style.fontFamily = "Source Code Pro, monospace";
     whichLevel.style.color = "white";
     whichLevel.style.position = "absolute";
-    whichLevel.style.bottom = "845px";
-    whichLevel.style.fontSize = "26px";
+    whichLevel.style.bottom = "715px";
+    whichLevel.style.fontSize = "32px";
     game.startGame(startSpeed, 2);
   }
 })

@@ -164,23 +164,13 @@ class Game {
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.drawPad();
+        let brickVals = "";
         if (this.songChoice === 1) {
-            this.brick.initialValues.forEach(el => {
-                this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
-                if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
-                    el.y += this.brick.dy;
-                    if (!this.bricks.includes(el)) this.bricks.push(el);
-                } else {
-                    for (let i = 0; i < this.bricks.length; i++) {
-                        if (this.bricks[i] === el) {
-                            this.bricks.splice(i, 1);
-                        }
-                    }
-                }
-                
-            })
+            brickVals = this.brick.initialValues;
         } else if (this.songChoice === 2) {
-            this.brick.initialValues2.forEach(el => {
+            brickVals = this.brick.initialValues2;
+        }
+        brickVals.forEach(el => {
                 this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
                 if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
                     el.y += this.brick.dy;
@@ -193,12 +183,11 @@ class Game {
                     }
                 }
                 
-            })
-        }
-        
+            }
+        ) 
         this.brick.count += 1;
 
-        this.brick.initialValues.forEach(el => {
+        brickVals.forEach(el => {
             if (el.y <= this.canvas.height) {
                 this.every = false;
             } else {
@@ -249,7 +238,7 @@ class Game {
                         this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
                         fallSpeed = 5;
                     }
-                    this.startGame(fallSpeed);      
+                    this.startGame(fallSpeed, this.songChoice);      
                     document.getElementById("final-score-background").style.display = "none";
                 }
             )
@@ -307,7 +296,7 @@ class Game {
                             scroll.style.display = "none";
                         }
                     }
-                    this.startGame(fallSpeed);      
+                    this.startGame(fallSpeed, this.songChoice);      
                     document.getElementById("final-score-background").style.display = "none";
                 }
             )
@@ -320,8 +309,8 @@ class Game {
                     whichLevel.style.fontFamily = "Source Code Pro, monospace";
                     whichLevel.style.color = "white";
                     whichLevel.style.position = "absolute";
-                    whichLevel.style.bottom = "845px";
-                    whichLevel.style.fontSize = "26px";
+                    whichLevel.style.bottom = "715px";
+                    whichLevel.style.fontSize = "32px";
                     if (this.nextLevel === 2) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;
@@ -338,7 +327,7 @@ class Game {
                             scroll.style.display = "none";
                         }
                     }
-                    this.startGame(fallSpeed);
+                    this.startGame(fallSpeed, this.songChoice);
                     document.getElementById("final-score-background").style.display = "none";
                 }
             )
