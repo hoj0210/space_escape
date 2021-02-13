@@ -2,7 +2,7 @@
 
 ## Background and Overview
 
-* ${SpaceEscape} is a web application/game that creates UI where if the user clicks on the falling tiles at the right time, it renders music notes and ultimately be able to play a song.
+* SpaceEscape is a web application/game that creates UI where if the user clicks on the falling tiles at the right time, it renders music notes and ultimately be able to play a song.
 
 * The tiles may change colors depending on what keyboard the user presses.
 
