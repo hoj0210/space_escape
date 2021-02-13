@@ -13,6 +13,7 @@ class Game {
         this.stopGame = this.stopGame.bind(this);
         this.showScore = this.showScore.bind(this);
         this.updateScore = this.updateScore.bind(this);
+        this.songChoice = 0;
         this.bricks = [];
         this.intervalId = 0;
         this.every = false;
@@ -42,7 +43,8 @@ class Game {
         else return true;
     }
 
-    startGame(speed){
+    startGame(speed, songNum){
+        this.songChoice = songNum;
         this.showScore();
         this.score = 0;
         this.bricks = [];
@@ -162,20 +164,38 @@ class Game {
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.drawPad();
-        this.brick.initialValues.forEach(el => {
-            this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
-            if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
-                el.y += this.brick.dy;
-                if (!this.bricks.includes(el)) this.bricks.push(el);
-            } else {
-                for (let i = 0; i < this.bricks.length; i++) {
-                    if (this.bricks[i] === el) {
-                        this.bricks.splice(i, 1);
+        if (this.songChoice === 1) {
+            this.brick.initialValues.forEach(el => {
+                this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
+                if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
+                    el.y += this.brick.dy;
+                    if (!this.bricks.includes(el)) this.bricks.push(el);
+                } else {
+                    for (let i = 0; i < this.bricks.length; i++) {
+                        if (this.bricks[i] === el) {
+                            this.bricks.splice(i, 1);
+                        }
                     }
                 }
-            }
-            
-        })
+                
+            })
+        } else if (this.songChoice === 2) {
+            this.brick.initialValues2.forEach(el => {
+                this.brick.drawBrick(el.x, el.y, el.start, el.countTime, el.correct);
+                if (this.brick.count >= el.countTime && this.onScreenBricks(el.y)) {
+                    el.y += this.brick.dy;
+                    if (!this.bricks.includes(el)) this.bricks.push(el);
+                } else {
+                    for (let i = 0; i < this.bricks.length; i++) {
+                        if (this.bricks[i] === el) {
+                            this.bricks.splice(i, 1);
+                        }
+                    }
+                }
+                
+            })
+        }
+        
         this.brick.count += 1;
 
         this.brick.initialValues.forEach(el => {

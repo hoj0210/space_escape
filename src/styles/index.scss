@@ -147,6 +147,39 @@ a{
   margin-top: 260px;
   margin-left: 38px;
 }
+.song-btn-container{
+  display: flex;
+  justify-content: center;
+}
+#twinkle-star{
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#twinkle-star:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  transition: 0.5s;
+}
+
+#canon{
+  margin-left: 38px;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#canon:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  transition: 0.5s;
+}
+
 .main-container{
   display: flex;
   align-items: center;
