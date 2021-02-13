@@ -1,14 +1,14 @@
-# RainSong Application
+# SpaceEscape Application
 
 ## Background and Overview
 
-* ${RainSong} is a web application/game that creates UI where if the user clicks on the falling tiles at the right time, it renders music notes and ultimately be able to play a song.
+* ${SpaceEscape} is a web application/game that creates UI where if the user clicks on the falling tiles at the right time, it renders music notes and ultimately be able to play a song.
 
 * The tiles may change colors depending on what keyboard the user presses.
 
 ## Functionality & MVP
 
-In RainSong, users will be able to:
+In SpaceEscape, users will be able to:
 
 [ ] change the colors of the tiles by pressing the space bar  
 [ ] press the tiles that fall down at the right time, rendering a note  
