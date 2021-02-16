@@ -26,8 +26,6 @@ document.addEventListener("click", e => {
     whichLevel.innerText = `LEVEL ${game.nextLevel}`;
     whichLevel.style.fontFamily = "Source Code Pro, monospace";
     whichLevel.style.color = "white";
-    whichLevel.style.position = "absolute";
-    whichLevel.style.bottom = "715px";
     whichLevel.style.fontSize = "32px";
     game.startGame(startSpeed, 1);
   } else if (e.target === canon) {
@@ -37,8 +35,6 @@ document.addEventListener("click", e => {
     whichLevel.innerText = `LEVEL ${game.nextLevel}`;
     whichLevel.style.fontFamily = "Source Code Pro, monospace";
     whichLevel.style.color = "white";
-    whichLevel.style.position = "absolute";
-    whichLevel.style.bottom = "715px";
     whichLevel.style.fontSize = "32px";
     game.startGame(startSpeed, 2);
   }

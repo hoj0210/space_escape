@@ -306,11 +306,6 @@ class Game {
                     let fallSpeed = 22;
                     let whichLevel = document.getElementById("which-level");
                     whichLevel.innerText = `LEVEL ${this.nextLevel}`;
-                    whichLevel.style.fontFamily = "Source Code Pro, monospace";
-                    whichLevel.style.color = "white";
-                    whichLevel.style.position = "absolute";
-                    whichLevel.style.bottom = "715px";
-                    whichLevel.style.fontSize = "32px";
                     if (this.nextLevel === 2) {
                         this.canvas.style.backgroundImage = "url(src/assets/level_2_canvas.png)"
                         fallSpeed = 15;

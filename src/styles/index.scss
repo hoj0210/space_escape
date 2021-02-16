@@ -35,7 +35,6 @@ a{
 }
 #myCanvas{
   position: relative;
-  top: 100px;
   border: 3px solid white;
   border-radius: 5px;
   background-image: url(../assets/game_background.png);
@@ -186,16 +185,17 @@ a{
   justify-content: center;
   color: white;
   font-family: 'Source Code Pro', monospace;
- 
+  top: 80px;
+  flex-direction: column;
+  position: relative;
 }
 #pad{
   min-width: 400px;
   height: 140px;
   border: 3px solid white;
   border-radius: 0 0 5px 5px;
-  position: relative;
-  right: 406px;
-  top: 560px;
+  position: absolute;
+  top: 551px;
   z-index: 2;
   background-color: transparent;
 }
@@ -240,4 +240,10 @@ img {
   background-color: white;
   color: black;
   transition: 0.7s;
+}
+
+#which-level{
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  font-size: 32px;
 }
