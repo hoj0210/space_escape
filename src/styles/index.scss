@@ -139,7 +139,7 @@ a{
   background-image: url(../assets/space_corridor.jpg);
   width: 400px;
   height: 600px;
-  top: 154px;
+  top: 3px;
   z-index: 5;
 }
 .start-game-text{
@@ -194,8 +194,8 @@ a{
   height: 140px;
   border: 3px solid white;
   border-radius: 0 0 5px 5px;
-  position: absolute;
-  top: 551px;
+  position: relative;
+  bottom: 146px;
   z-index: 2;
   background-color: transparent;
 }
@@ -246,4 +246,5 @@ img {
   font-family: "Source Code Pro", monospace;
   color: white;
   font-size: 32px;
+  color: transparent;
 }
