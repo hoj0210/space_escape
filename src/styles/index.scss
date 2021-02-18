@@ -85,9 +85,6 @@ a{
    position: absolute;
    border-radius: 5px;
    width: 350px;
-   top: 57%;
-   left: 44.3%;
-   transform: translate(-50%, -50%);  
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -96,6 +93,14 @@ a{
    padding: 20px;
    border: 3px solid rgb(0, 0, 0);
    color: black;
+   z-index: 11;
+   top: 43px;
+   height: 553px;
+   display: none;
+}
+
+.instructions-text p:first-of-type{
+  margin-top: 0px;
 }
 
 #final-score-container-top{
@@ -139,7 +144,7 @@ a{
   background-image: url(../assets/space_corridor.jpg);
   width: 400px;
   height: 600px;
-  top: 3px;
+  top: 43px;
   z-index: 5;
 }
 .start-game-text{

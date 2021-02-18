@@ -2,15 +2,18 @@ import "./styles/index.scss";
 import Game from './scripts/game';
 
 const instruct = document.getElementById("instructions");
-const scroll = document.getElementById('instruction-background');
+const containerTop = document.getElementById("instruction-container-top");
+const instructBack = document.getElementById('instruction-background');
 
 instruct.onclick = function() {
-  scroll.style.display = "block";
+  instructBack.style.display = "block";
+  containerTop.style.display = "block";
 }
 
 window.onclick= function(e) {
-  if (e.target === scroll) {
-    scroll.style.display = "none";
+  if (e.target === instructBack) {
+    instructBack.style.display = "none";
+    containerTop.style.display = "none";
   }
 }
 

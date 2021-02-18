@@ -316,10 +316,11 @@ class Game {
                         this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
                         fallSpeed = 5;
                     }
-                    const scroll = document.getElementById("instruction-background");
+                    
+                    const instructBack = document.getElementById("instruction-background");
                     window.onclick = function(e) {
-                        if (e.target === scroll) {
-                            scroll.style.display = "none";
+                        if (e.target === instructBack) {
+                            instructBack.style.display = "none";
                         }
                     }
                     this.startGame(fallSpeed, this.songChoice);
