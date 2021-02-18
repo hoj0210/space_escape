@@ -138,7 +138,13 @@ a{
   cursor: pointer;
   border: 3px solid rgb(41, 41, 41);
 }
-
+.keyboard{
+  font-size: 32px;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: -28px;
+  display: flex;
+}
 #start-game-page{
   position: absolute;
   background-image: url(../assets/space_corridor.jpg);
@@ -196,13 +202,16 @@ a{
   flex-direction: column;
   position: relative;
 }
+.keyboard-key{
+  margin-right: 65px;
+}
 #pad{
   min-width: 400px;
   height: 140px;
   border: 3px solid white;
   border-radius: 0 0 5px 5px;
   position: relative;
-  bottom: 146px;
+  bottom: 222px;
   z-index: 2;
   background-color: transparent;
 }
