@@ -225,6 +225,7 @@ class Game {
             tryAgain.style.outline = "none";
             finalScore.appendChild(tryAgain);
             document.getElementById("final-score-background").style.display = "block";
+            document.getElementById("final-score-container-top").style.display = "block";
             tryAgain.addEventListener(
                 "click", () => {
                     let fallSpeed = 22;
@@ -238,8 +239,9 @@ class Game {
                         this.canvas.style.backgroundImage = "url(src/assets/level_4_canvas.png)"
                         fallSpeed = 5;
                     }
-                    this.startGame(fallSpeed, this.songChoice);      
+                    this.startGame(fallSpeed, this.songChoice);       
                     document.getElementById("final-score-background").style.display = "none";
+                    document.getElementById("final-score-container-top").style.display = "none";
                 }
             )
             this.replay = false;
@@ -249,6 +251,7 @@ class Game {
             lastLevelText.style.marginTop = "12px";
             document.getElementById("final-score-container-top").style.width = "400px";
             document.getElementById("final-score-background").style.display = "block";
+            document.getElementById("final-score-container-top").style.display = "block";
         } else {
             // clearInterval(this.intervalId);
             // let finalScore = document.getElementById("final-score-text");
@@ -277,6 +280,7 @@ class Game {
             nextLevel.style.outline = "none";
             finalScore.appendChild(nextLevel);
             document.getElementById("final-score-background").style.display = "block";
+            document.getElementById("final-score-container-top").style.display = "block";
             tryAgain.addEventListener(
                 "click", () => {
                     let fallSpeed = 22;
@@ -298,6 +302,7 @@ class Game {
                     }
                     this.startGame(fallSpeed, this.songChoice);      
                     document.getElementById("final-score-background").style.display = "none";
+                    document.getElementById("final-score-container-top").style.display = "none";
                 }
             )
             nextLevel.addEventListener(
@@ -325,6 +330,7 @@ class Game {
                     }
                     this.startGame(fallSpeed, this.songChoice);
                     document.getElementById("final-score-background").style.display = "none";
+                    document.getElementById("final-score-container-top").style.display = "none";
                 }
             )
 

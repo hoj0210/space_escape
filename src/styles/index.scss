@@ -108,9 +108,7 @@ a{
    position: absolute;
    border-radius: 5px;
    width: 350px;
-   top: 40%;
-   left: 45.25%;
-   transform: translate(-50%, -50%);  
+   top: 295px; 
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -119,6 +117,8 @@ a{
    padding: 20px;
    border: 3px solid black;
    color: black;
+   display: none;
+   z-index: 11;
 }
 
 #instructions{
