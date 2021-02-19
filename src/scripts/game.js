@@ -61,99 +61,192 @@ class Game {
         this.ctx.stroke();
     }
     keyPressed(e) {
-
-        if (e.keyCode === 65) {
-            for (let i = 0; i < this.bricks.length; i++) {
-                if (this.bricks[i].x === 35) {
-                    if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
-                        this.bricks[i].correct = true;
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
-                        this.updateScore();
-                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.5";             
-                        break
-                    }    
-                    if (!this.bricks[i].correct) {          
-                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        this.pad.style.opacity = "0.5";
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease("B4", "8n")
+        if (!e.repeat) {
+            if (e.keyCode === 65) {
+                for (let i = 0; i < this.bricks.length; i++) {
+                    if (this.bricks[i].x === 35) {
+                        if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+                            this.bricks[i].correct = true;
+                            this.score += 10;
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+                            this.updateScore();
+                            this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                            this.pad.style.opacity = "0.5";             
+                            break
+                        }    
+                        if (!this.bricks[i].correct) {          
+                            this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                            this.pad.style.opacity = "0.5";
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease("B4", "8n")
+                        }
                     }
                 }
-            }
-        } else if (e.keyCode === 83) {
-            for (let i = 0; i < this.bricks.length; i++) {
-                if (this.bricks[i].x === 116) {
-                    if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
-                        this.bricks[i].correct = true;
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
-                        this.updateScore();
-                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.5";             
-                        break
-                    }    
-                    if (!this.bricks[i].correct) {          
-                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        this.pad.style.opacity = "0.5";
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease("B4", "8n")
+            } else if (e.keyCode === 83) {
+                for (let i = 0; i < this.bricks.length; i++) {
+                    if (this.bricks[i].x === 116) {
+                        if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+                            this.bricks[i].correct = true;
+                            this.score += 10;
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+                            this.updateScore();
+                            this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                            this.pad.style.opacity = "0.5";             
+                            break
+                        }    
+                        if (!this.bricks[i].correct) {          
+                            this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                            this.pad.style.opacity = "0.5";
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease("B4", "8n")
+                        }
                     }
                 }
-            }
-        } else if (e.keyCode === 68) {
-            for (let i = 0; i < this.bricks.length; i++) {
-                if (this.bricks[i].x === 197) {
-                    if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
-                        this.bricks[i].correct = true;
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
-                        this.updateScore();
-                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.5";             
-                        break
-                    }    
-                    if (!this.bricks[i].correct) {          
-                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        this.pad.style.opacity = "0.5";
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease("B4", "8n")
+            } else if (e.keyCode === 68) {
+                for (let i = 0; i < this.bricks.length; i++) {
+                    if (this.bricks[i].x === 197) {
+                        if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+                            this.bricks[i].correct = true;
+                            this.score += 10;
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+                            this.updateScore();
+                            this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                            this.pad.style.opacity = "0.5";             
+                            break
+                        }    
+                        if (!this.bricks[i].correct) {          
+                            this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                            this.pad.style.opacity = "0.5";
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease("B4", "8n")
+                        }
                     }
                 }
-            }
-        } else if (e.keyCode === 70) {
-            for (let i = 0; i < this.bricks.length; i++) {
-                if (this.bricks[i].x === 278) {
-                    if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
-                        this.bricks[i].correct = true;
-                        this.score += 10;
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
-                        this.updateScore();
-                        this.pad.style.backgroundColor = "rgb(255, 255, 125)";
-                        this.pad.style.opacity = "0.5";             
-                        break
-                    }    
-                    if (!this.bricks[i].correct) {          
-                        this.pad.style.backgroundColor = "rgb(255, 72, 72)";
-                        this.pad.style.opacity = "0.5";
-                        const synth = new Tone.Synth().toDestination();
-                        synth.triggerAttackRelease("B4", "8n")
+            } else if (e.keyCode === 70) {
+                for (let i = 0; i < this.bricks.length; i++) {
+                    if (this.bricks[i].x === 278) {
+                        if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+                            this.bricks[i].correct = true;
+                            this.score += 10;
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+                            this.updateScore();
+                            this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+                            this.pad.style.opacity = "0.5";             
+                            break
+                        }    
+                        if (!this.bricks[i].correct) {          
+                            this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+                            this.pad.style.opacity = "0.5";
+                            const synth = new Tone.Synth().toDestination();
+                            synth.triggerAttackRelease("B4", "8n")
+                        }
                     }
                 }
-            }
-        } else {
-            if (e.keyCode !== 13 ) {
-                this.pad.style.backgroundColor = "rgb(255, 71, 71)";
-                this.pad.style.opacity = "0.5";
-                const synth = new Tone.Synth().toDestination();
-                synth.triggerAttackRelease("B4", "8n");
+            } else {
+                if (e.keyCode !== 13 ) {
+                    this.pad.style.backgroundColor = "rgb(255, 71, 71)";
+                    this.pad.style.opacity = "0.5";
+                    const synth = new Tone.Synth().toDestination();
+                    synth.triggerAttackRelease("B4", "8n");
+                }
             }
         }
+        // if (e.keyCode === 65) {
+        //     for (let i = 0; i < this.bricks.length; i++) {
+        //         if (this.bricks[i].x === 35) {
+        //             if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+        //                 this.bricks[i].correct = true;
+        //                 this.score += 10;
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+        //                 this.updateScore();
+        //                 this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+        //                 this.pad.style.opacity = "0.5";             
+        //                 break
+        //             }    
+        //             if (!this.bricks[i].correct) {          
+        //                 this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+        //                 this.pad.style.opacity = "0.5";
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease("B4", "8n")
+        //             }
+        //         }
+        //     }
+        // } else if (e.keyCode === 83) {
+        //     for (let i = 0; i < this.bricks.length; i++) {
+        //         if (this.bricks[i].x === 116) {
+        //             if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+        //                 this.bricks[i].correct = true;
+        //                 this.score += 10;
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+        //                 this.updateScore();
+        //                 this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+        //                 this.pad.style.opacity = "0.5";             
+        //                 break
+        //             }    
+        //             if (!this.bricks[i].correct) {          
+        //                 this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+        //                 this.pad.style.opacity = "0.5";
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease("B4", "8n")
+        //             }
+        //         }
+        //     }
+        // } else if (e.keyCode === 68) {
+        //     for (let i = 0; i < this.bricks.length; i++) {
+        //         if (this.bricks[i].x === 197) {
+        //             if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+        //                 this.bricks[i].correct = true;
+        //                 this.score += 10;
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+        //                 this.updateScore();
+        //                 this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+        //                 this.pad.style.opacity = "0.5";             
+        //                 break
+        //             }    
+        //             if (!this.bricks[i].correct) {          
+        //                 this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+        //                 this.pad.style.opacity = "0.5";
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease("B4", "8n")
+        //             }
+        //         }
+        //     }
+        // } else if (e.keyCode === 70) {
+        //     for (let i = 0; i < this.bricks.length; i++) {
+        //         if (this.bricks[i].x === 278) {
+        //             if ((this.bricks[i].start === -280 && (this.bricks[i].y + 140) < 600 && (this.bricks[i].y + 140) > 460) || (this.bricks[i].y < 600 && this.bricks[i].y > 460)) {   
+        //                 this.bricks[i].correct = true;
+        //                 this.score += 10;
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease(this.bricks[i].tone, this.bricks[i].length);
+        //                 this.updateScore();
+        //                 this.pad.style.backgroundColor = "rgb(255, 255, 125)";
+        //                 this.pad.style.opacity = "0.5";             
+        //                 break
+        //             }    
+        //             if (!this.bricks[i].correct) {          
+        //                 this.pad.style.backgroundColor = "rgb(255, 72, 72)";
+        //                 this.pad.style.opacity = "0.5";
+        //                 const synth = new Tone.Synth().toDestination();
+        //                 synth.triggerAttackRelease("B4", "8n")
+        //             }
+        //         }
+        //     }
+        // } else {
+        //     if (e.keyCode !== 13 ) {
+        //         this.pad.style.backgroundColor = "rgb(255, 71, 71)";
+        //         this.pad.style.opacity = "0.5";
+        //         const synth = new Tone.Synth().toDestination();
+        //         synth.triggerAttackRelease("B4", "8n");
+        //     }
+        // }
     }
 
     keyUnpressed (e) {
