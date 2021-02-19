@@ -138,12 +138,12 @@ a{
   cursor: pointer;
   border: 3px solid rgb(41, 41, 41);
 }
-.keyboard{
+#keyboard{
   font-size: 32px;
   color: white;
   font-family: 'Source Code Pro', monospace;
   margin-top: -28px;
-  display: flex;
+  display: none;
 }
 #start-game-page{
   position: absolute;
@@ -202,6 +202,7 @@ a{
   flex-direction: column;
   position: relative;
 }
+
 .keyboard-key{
   margin-right: 65px;
 }

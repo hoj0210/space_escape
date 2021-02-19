@@ -24,6 +24,7 @@ const canon = document.getElementById("canon");
 document.addEventListener("click", e => {
   if (e.target === twinkleStar) {
     document.getElementById("start-game-page").style.display = "none";
+    document.getElementById("keyboard").style.display = "flex";
     document.getElementById("try-again-button").style.display = "block";
     let whichLevel = document.getElementById("which-level");
     whichLevel.innerText = `LEVEL ${game.nextLevel}`;
