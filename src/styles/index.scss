@@ -142,7 +142,7 @@ a{
   font-size: 32px;
   color: white;
   font-family: 'Source Code Pro', monospace;
-  margin-top: -28px;
+  margin-top: 5px;
   display: none;
 }
 #start-game-page{
@@ -191,7 +191,9 @@ a{
   border: 3px solid black;
   transition: 0.5s;
 }
-
+#keyboard img{
+  width: 79px;
+}
 .main-container{
   display: flex;
   align-items: center;
@@ -204,15 +206,15 @@ a{
 }
 
 .keyboard-key{
-  margin-right: 65px;
+  margin-right: 3px;
 }
 #pad{
   min-width: 400px;
-  height: 140px;
+  height: 139px;
   border: 3px solid white;
   border-radius: 0 0 5px 5px;
   position: relative;
-  bottom: 222px;
+  bottom: 229px;
   z-index: 2;
   background-color: transparent;
 }
