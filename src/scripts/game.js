@@ -14,6 +14,7 @@ class Game {
         this.showScore = this.showScore.bind(this);
         this.updateScore = this.updateScore.bind(this);
         this.songChoice = 0;
+        this.synth1 = new Tone.Synth().toDestination();
         this.bricks = [];
         this.intervalId = 0;
         this.every = false;
