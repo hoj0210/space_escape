@@ -34,6 +34,7 @@ document.addEventListener("click", e => {
     game.startGame(startSpeed, 1);
   } else if (e.target === canon) {
     document.getElementById("start-game-page").style.display = "none";
+    document.getElementById("keyboard").style.display = "flex";
     document.getElementById("try-again-button").style.display = "block";
     let whichLevel = document.getElementById("which-level");
     whichLevel.innerText = `LEVEL ${game.nextLevel}`;
