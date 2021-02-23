@@ -1,4 +1,257 @@
-body{background-image:url(images/space_background.jpg);background-size:cover;background-attachment:fixed;height:100%;width:100%}#header{border-bottom:3px solid white;font-family:'Source Code Pro', monospace;display:flex;justify-content:space-evenly;font-size:32px;color:white}#the-real-body{display:flex;justify-content:center}i{color:white}i:hover{color:#d2d2d2;transition:0.5s}a{color:black}.author{min-width:470px}.author-links{min-width:130px}#myCanvas{position:relative;border:3px solid white;border-radius:5px;background-image:url(images/game_background.png)}#score-box{border:3px solid white;border-radius:5px;height:43px;width:160px;margin-right:50px;margin-top:40px;color:white;font-family:'Source Code Pro', monospace;padding-top:18px;padding-left:15px}#score-box:hover{border:3px solid black;background-color:white;color:black;transition:0.7s}#instruction-background{position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,0.35);z-index:10;display:none}#final-score-background{position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,0.35);z-index:10;display:none}#instruction-container-top{background-color:white;position:absolute;border-radius:5px;width:350px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:'Source Code Pro', monospace;padding:20px;border:3px solid #000;color:black;z-index:11;top:43px;height:553px;display:none}.instructions-text p:first-of-type{margin-top:0px}#final-score-container-top{background-color:white;position:absolute;border-radius:5px;width:350px;top:295px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:'Source Code Pro', monospace;padding:20px;border:3px solid black;color:black;display:none;z-index:11}#instructions{font-family:'Source Code Pro', monospace;color:white;border:3px solid white;padding-left:15px;border-radius:5px;width:130px;margin-top:103px}#instructions:hover{transition:0.7s;background-color:white;color:black;cursor:pointer;border:3px solid #292929}#keyboard{font-size:32px;color:white;font-family:'Source Code Pro', monospace;margin-top:5px;display:none}#start-game-page{position:absolute;background-image:url(images/space_corridor.jpg);width:400px;height:600px;top:43px;z-index:5}.start-game-text{margin-top:260px;margin-left:38px}.song-btn-container{display:flex;justify-content:center}#twinkle-star{border:3px solid white;border-radius:5px;padding:10px;background-color:black}#twinkle-star:hover{cursor:pointer;background-color:white;color:black;border:3px solid black;transition:0.5s}#canon{margin-left:38px;border:3px solid white;border-radius:5px;padding:10px;background-color:black}#canon:hover{cursor:pointer;background-color:white;color:black;border:3px solid black;transition:0.5s}#keyboard img{width:79px}.main-container{display:flex;align-items:center;justify-content:center;color:white;font-family:'Source Code Pro', monospace;top:80px;flex-direction:column;position:relative}.keyboard-key{margin-right:3px}#pad{min-width:400px;height:139px;border:3px solid white;border-radius:0 0 5px 5px;position:relative;bottom:229px;z-index:2;background-color:transparent}.rule-pic{display:flex}img{width:200px}.rules{font-size:12px}.rule1{font-size:10px;width:100px;position:relative;top:202px;margin-left:14px}.rule-box{margin-top:18px}#try-again-button{border:solid 3px white;border-radius:5px;color:white;font-family:'Source Code Pro', monospace;background-color:transparent;padding-left:10px;width:152px;margin-top:40px;padding-top:15px;padding-bottom:15px;outline:none;display:none}#try-again-button:hover{cursor:pointer;border:solid 3px black;background-color:white;color:black;transition:0.7s}#which-level{font-family:"Source Code Pro", monospace;color:white;font-size:32px;color:transparent}
+body {
+  background-image: url(images/space_background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%; }
+
+#header {
+  border-bottom: 3px solid white;
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 32px;
+  color: white; }
+
+#the-real-body {
+  display: flex;
+  justify-content: center; }
+
+i {
+  color: white; }
+
+i:hover {
+  color: #d2d2d2;
+  transition: 0.5s; }
+
+a {
+  color: black; }
+
+.author {
+  min-width: 470px; }
+
+.author-links {
+  min-width: 130px; }
+
+#myCanvas {
+  position: relative;
+  border: 3px solid white;
+  border-radius: 5px;
+  background-image: url(images/game_background.png); }
+
+#score-box {
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 43px;
+  width: 160px;
+  margin-right: 50px;
+  margin-top: 40px;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  padding-top: 18px;
+  padding-left: 15px; }
+
+#score-box:hover {
+  border: 3px solid black;
+  background-color: white;
+  color: black;
+  transition: 0.7s; }
+
+#instruction-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 10;
+  display: none; }
+
+#final-score-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 10;
+  display: none; }
+
+#instruction-container-top {
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Code Pro', monospace;
+  padding: 20px;
+  border: 3px solid black;
+  color: black;
+  z-index: 11;
+  top: 43px;
+  height: 553px;
+  display: none; }
+
+.instructions-text p:first-of-type {
+  margin-top: 0px; }
+
+#final-score-container-top {
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  width: 350px;
+  top: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Code Pro', monospace;
+  padding: 20px;
+  border: 3px solid black;
+  color: black;
+  display: none;
+  z-index: 11; }
+
+#instructions {
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  border: 3px solid white;
+  padding-left: 15px;
+  border-radius: 5px;
+  width: 130px;
+  margin-top: 103px; }
+
+#instructions:hover {
+  transition: 0.7s;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 3px solid #292929; }
+
+#keyboard {
+  font-size: 32px;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 5px;
+  display: none; }
+
+#start-game-page {
+  position: absolute;
+  background-image: url(images/space_corridor.jpg);
+  width: 400px;
+  height: 600px;
+  top: 43px;
+  z-index: 5; }
+
+.start-game-text {
+  margin-top: 260px;
+  margin-left: 38px; }
+
+.song-btn-container {
+  display: flex;
+  justify-content: center; }
+
+#twinkle-star {
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black; }
+
+#twinkle-star:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  transition: 0.5s; }
+
+#canon {
+  margin-left: 38px;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black; }
+
+#canon:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  transition: 0.5s; }
+
+#keyboard img {
+  width: 79px; }
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  top: 80px;
+  flex-direction: column;
+  position: relative; }
+
+.keyboard-key {
+  margin-right: 3px; }
+
+#pad {
+  min-width: 400px;
+  height: 139px;
+  border: 3px solid white;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  bottom: 229px;
+  z-index: 2;
+  background-color: transparent; }
+
+.rule-pic {
+  display: flex; }
+
+img {
+  width: 200px; }
+
+.rules {
+  font-size: 12px; }
+
+.rule1 {
+  font-size: 10px;
+  width: 100px;
+  position: relative;
+  top: 202px;
+  margin-left: 14px; }
+
+.rule-box {
+  margin-top: 18px; }
+
+#try-again-button {
+  border: solid 3px white;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  background-color: transparent;
+  padding-left: 10px;
+  width: 152px;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  outline: none;
+  display: none; }
+
+#try-again-button:hover {
+  cursor: pointer;
+  border: solid 3px black;
+  background-color: white;
+  color: black;
+  transition: 0.7s; }
+
+#which-level {
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  font-size: 32px;
+  color: transparent; }
 
 
-/*# sourceMappingURL=main.css.map*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2luZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGNBQWM7O0FBRWQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZTs7QUFFZjtBQUNBO0FBQ0EsMEJBQTBCOztBQUUxQjtBQUNBLGVBQWU7O0FBRWY7QUFDQTtBQUNBLG1CQUFtQjs7QUFFbkI7QUFDQSxlQUFlOztBQUVmO0FBQ0EsbUJBQW1COztBQUVuQjtBQUNBLG1CQUFtQjs7QUFFbkI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxvREFBb0Q7O0FBRXBEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EscUJBQXFCOztBQUVyQjtBQUNBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQjs7QUFFbkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGdCQUFnQjs7QUFFaEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGdCQUFnQjs7QUFFaEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0I7O0FBRWhCO0FBQ0Esa0JBQWtCOztBQUVsQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxjQUFjOztBQUVkO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esb0JBQW9COztBQUVwQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsNEJBQTRCOztBQUU1QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0JBQWdCOztBQUVoQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxhQUFhOztBQUViO0FBQ0E7QUFDQSxvQkFBb0I7O0FBRXBCO0FBQ0E7QUFDQSwwQkFBMEI7O0FBRTFCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsMEJBQTBCOztBQUUxQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1COztBQUVuQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsMEJBQTBCOztBQUUxQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1COztBQUVuQjtBQUNBLGNBQWM7O0FBRWQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFCQUFxQjs7QUFFckI7QUFDQSxvQkFBb0I7O0FBRXBCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQ0FBZ0M7O0FBRWhDO0FBQ0EsZ0JBQWdCOztBQUVoQjtBQUNBLGVBQWU7O0FBRWY7QUFDQSxrQkFBa0I7O0FBRWxCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxvQkFBb0I7O0FBRXBCO0FBQ0EsbUJBQW1COztBQUVuQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0I7O0FBRWhCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQkFBbUI7O0FBRW5CO0FBQ0E7QUFDQTtBQUNBO0FBQ0EscUJBQXFCIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChpbWFnZXMvc3BhY2VfYmFja2dyb3VuZC5qcGcpO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLWF0dGFjaG1lbnQ6IGZpeGVkO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlOyB9XG5cbiNoZWFkZXIge1xuICBib3JkZXItYm90dG9tOiAzcHggc29saWQgd2hpdGU7XG4gIGZvbnQtZmFtaWx5OiAnU291cmNlIENvZGUgUHJvJywgbW9ub3NwYWNlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgZm9udC1zaXplOiAzMnB4O1xuICBjb2xvcjogd2hpdGU7IH1cblxuI3RoZS1yZWFsLWJvZHkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgfVxuXG5pIHtcbiAgY29sb3I6IHdoaXRlOyB9XG5cbmk6aG92ZXIge1xuICBjb2xvcjogI2QyZDJkMjtcbiAgdHJhbnNpdGlvbjogMC41czsgfVxuXG5hIHtcbiAgY29sb3I6IGJsYWNrOyB9XG5cbi5hdXRob3Ige1xuICBtaW4td2lkdGg6IDQ3MHB4OyB9XG5cbi5hdXRob3ItbGlua3Mge1xuICBtaW4td2lkdGg6IDEzMHB4OyB9XG5cbiNteUNhbnZhcyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKGltYWdlcy9nYW1lX2JhY2tncm91bmQucG5nKTsgfVxuXG4jc2NvcmUtYm94IHtcbiAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgaGVpZ2h0OiA0M3B4O1xuICB3aWR0aDogMTYwcHg7XG4gIG1hcmdpbi1yaWdodDogNTBweDtcbiAgbWFyZ2luLXRvcDogNDBweDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LWZhbWlseTogJ1NvdXJjZSBDb2RlIFBybycsIG1vbm9zcGFjZTtcbiAgcGFkZGluZy10b3A6IDE4cHg7XG4gIHBhZGRpbmctbGVmdDogMTVweDsgfVxuXG4jc2NvcmUtYm94OmhvdmVyIHtcbiAgYm9yZGVyOiAzcHggc29saWQgYmxhY2s7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBjb2xvcjogYmxhY2s7XG4gIHRyYW5zaXRpb246IDAuN3M7IH1cblxuI2luc3RydWN0aW9uLWJhY2tncm91bmQge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgYm90dG9tOiAwO1xuICByaWdodDogMDtcbiAgbGVmdDogMDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjM1KTtcbiAgei1pbmRleDogMTA7XG4gIGRpc3BsYXk6IG5vbmU7IH1cblxuI2ZpbmFsLXNjb3JlLWJhY2tncm91bmQge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgYm90dG9tOiAwO1xuICByaWdodDogMDtcbiAgbGVmdDogMDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjM1KTtcbiAgei1pbmRleDogMTA7XG4gIGRpc3BsYXk6IG5vbmU7IH1cblxuI2luc3RydWN0aW9uLWNvbnRhaW5lci10b3Age1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIHdpZHRoOiAzNTBweDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtZmFtaWx5OiAnU291cmNlIENvZGUgUHJvJywgbW9ub3NwYWNlO1xuICBwYWRkaW5nOiAyMHB4O1xuICBib3JkZXI6IDNweCBzb2xpZCBibGFjaztcbiAgY29sb3I6IGJsYWNrO1xuICB6LWluZGV4OiAxMTtcbiAgdG9wOiA0M3B4O1xuICBoZWlnaHQ6IDU1M3B4O1xuICBkaXNwbGF5OiBub25lOyB9XG5cbi5pbnN0cnVjdGlvbnMtdGV4dCBwOmZpcnN0LW9mLXR5cGUge1xuICBtYXJnaW4tdG9wOiAwcHg7IH1cblxuI2ZpbmFsLXNjb3JlLWNvbnRhaW5lci10b3Age1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIHdpZHRoOiAzNTBweDtcbiAgdG9wOiAyOTVweDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtZmFtaWx5OiAnU291cmNlIENvZGUgUHJvJywgbW9ub3NwYWNlO1xuICBwYWRkaW5nOiAyMHB4O1xuICBib3JkZXI6IDNweCBzb2xpZCBibGFjaztcbiAgY29sb3I6IGJsYWNrO1xuICBkaXNwbGF5OiBub25lO1xuICB6LWluZGV4OiAxMTsgfVxuXG4jaW5zdHJ1Y3Rpb25zIHtcbiAgZm9udC1mYW1pbHk6ICdTb3VyY2UgQ29kZSBQcm8nLCBtb25vc3BhY2U7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7XG4gIHBhZGRpbmctbGVmdDogMTVweDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICB3aWR0aDogMTMwcHg7XG4gIG1hcmdpbi10b3A6IDEwM3B4OyB9XG5cbiNpbnN0cnVjdGlvbnM6aG92ZXIge1xuICB0cmFuc2l0aW9uOiAwLjdzO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgY29sb3I6IGJsYWNrO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJvcmRlcjogM3B4IHNvbGlkICMyOTI5Mjk7IH1cblxuI2tleWJvYXJkIHtcbiAgZm9udC1zaXplOiAzMnB4O1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtZmFtaWx5OiAnU291cmNlIENvZGUgUHJvJywgbW9ub3NwYWNlO1xuICBtYXJnaW4tdG9wOiA1cHg7XG4gIGRpc3BsYXk6IG5vbmU7IH1cblxuI3N0YXJ0LWdhbWUtcGFnZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKGltYWdlcy9zcGFjZV9jb3JyaWRvci5qcGcpO1xuICB3aWR0aDogNDAwcHg7XG4gIGhlaWdodDogNjAwcHg7XG4gIHRvcDogNDNweDtcbiAgei1pbmRleDogNTsgfVxuXG4uc3RhcnQtZ2FtZS10ZXh0IHtcbiAgbWFyZ2luLXRvcDogMjYwcHg7XG4gIG1hcmdpbi1sZWZ0OiAzOHB4OyB9XG5cbi5zb25nLWJ0bi1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgfVxuXG4jdHdpbmtsZS1zdGFyIHtcbiAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7IH1cblxuI3R3aW5rbGUtc3Rhcjpob3ZlciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGNvbG9yOiBibGFjaztcbiAgYm9yZGVyOiAzcHggc29saWQgYmxhY2s7XG4gIHRyYW5zaXRpb246IDAuNXM7IH1cblxuI2Nhbm9uIHtcbiAgbWFyZ2luLWxlZnQ6IDM4cHg7XG4gIGJvcmRlcjogM3B4IHNvbGlkIHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrOyB9XG5cbiNjYW5vbjpob3ZlciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGNvbG9yOiBibGFjaztcbiAgYm9yZGVyOiAzcHggc29saWQgYmxhY2s7XG4gIHRyYW5zaXRpb246IDAuNXM7IH1cblxuI2tleWJvYXJkIGltZyB7XG4gIHdpZHRoOiA3OXB4OyB9XG5cbi5tYWluLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtZmFtaWx5OiAnU291cmNlIENvZGUgUHJvJywgbW9ub3NwYWNlO1xuICB0b3A6IDgwcHg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTsgfVxuXG4ua2V5Ym9hcmQta2V5IHtcbiAgbWFyZ2luLXJpZ2h0OiAzcHg7IH1cblxuI3BhZCB7XG4gIG1pbi13aWR0aDogNDAwcHg7XG4gIGhlaWdodDogMTM5cHg7XG4gIGJvcmRlcjogM3B4IHNvbGlkIHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiAwIDAgNXB4IDVweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBib3R0b206IDIyOXB4O1xuICB6LWluZGV4OiAyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsgfVxuXG4ucnVsZS1waWMge1xuICBkaXNwbGF5OiBmbGV4OyB9XG5cbmltZyB7XG4gIHdpZHRoOiAyMDBweDsgfVxuXG4ucnVsZXMge1xuICBmb250LXNpemU6IDEycHg7IH1cblxuLnJ1bGUxIHtcbiAgZm9udC1zaXplOiAxMHB4O1xuICB3aWR0aDogMTAwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiAyMDJweDtcbiAgbWFyZ2luLWxlZnQ6IDE0cHg7IH1cblxuLnJ1bGUtYm94IHtcbiAgbWFyZ2luLXRvcDogMThweDsgfVxuXG4jdHJ5LWFnYWluLWJ1dHRvbiB7XG4gIGJvcmRlcjogc29saWQgM3B4IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1mYW1pbHk6ICdTb3VyY2UgQ29kZSBQcm8nLCBtb25vc3BhY2U7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIHdpZHRoOiAxNTJweDtcbiAgbWFyZ2luLXRvcDogNDBweDtcbiAgcGFkZGluZy10b3A6IDE1cHg7XG4gIHBhZGRpbmctYm90dG9tOiAxNXB4O1xuICBvdXRsaW5lOiBub25lO1xuICBkaXNwbGF5OiBub25lOyB9XG5cbiN0cnktYWdhaW4tYnV0dG9uOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBib3JkZXI6IHNvbGlkIDNweCBibGFjaztcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGNvbG9yOiBibGFjaztcbiAgdHJhbnNpdGlvbjogMC43czsgfVxuXG4jd2hpY2gtbGV2ZWwge1xuICBmb250LWZhbWlseTogXCJTb3VyY2UgQ29kZSBQcm9cIiwgbW9ub3NwYWNlO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtc2l6ZTogMzJweDtcbiAgY29sb3I6IHRyYW5zcGFyZW50OyB9XG4iXSwic291cmNlUm9vdCI6IiJ9*/
